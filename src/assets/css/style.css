@@ -213,7 +213,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .section {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 .section-sm {
@@ -574,7 +574,7 @@ ul.list-styled {
   border-bottom: 1px solid rgba(146, 90, 35, 0.179);
   font-size: 14px;
   background-color: #24b0ed;
-
+  border-bottom: 3px solid #CAA350;
   align-items: center;
 }
 @media (max-width: 1023px) {
@@ -741,7 +741,6 @@ ul.list-styled {
 }
 
 .slider {
-  background: url("../images/bg/banner.jpg") no-repeat;
   background-size: cover;
   background-position: 10% 0%;
   padding: 200px 0;
@@ -1762,13 +1761,14 @@ h3.quote::before {
 .footer {
   padding-bottom: 10px;
   background: url("/assets/images/bg/footer.png") no-repeat;
+  background-size: cover !important;
 }
 .footer .copyright {
   color:#fff;
   
 }
 .footer .copyright a {
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -1854,6 +1854,7 @@ h3.quote::before {
   .footer-socials li a {
     margin-left: 0px;
   }
+
 }
 @media (max-width: 768px) {
   .footer-socials {

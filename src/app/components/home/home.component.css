@@ -19,3 +19,40 @@
     border-bottom: 2px solid #CAA350;
     border-top: 2px solid #CAA350;  
   }
+
+.clr{
+    border-bottom: 10px solid #CAA350;
+}
+
+.cardd{
+    background-color: #fff;
+    border-radius: 20px;
+    transform: translateY(-90px);
+    border-bottom: 2px solid #CAA350;
+    border-top: 2px solid #CAA350;  
+    
+}
+
+.pl{
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    background-color: #CAA350;
+}
+.pd{
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    background-color: #24b0ed;
+}
+.pg{
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    background-color: #fff;
+}
+.serch-box{
+    display: flex;
+    padding: 0px 10px;
+}
+
