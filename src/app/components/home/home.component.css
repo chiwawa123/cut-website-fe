@@ -55,4 +55,10 @@
     display: flex;
     padding: 0px 10px;
 }
+.height-line{
+    line-height: normal;
+    list-style: none;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
 
