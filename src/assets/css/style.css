@@ -33,6 +33,7 @@ font-family: 'Poppins', sans-serif;
 .navbar{
   background-color: #fff;
   height: 70px;
+
 }
 
 h1, .h1 {
@@ -213,7 +214,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .section-sm {
@@ -351,6 +352,8 @@ a {
   .p-5 {
     padding: 2rem !important;
   }
+
+ 
   h2, .h2 {
     font-size: 1.2rem;
     font-weight: 600;
@@ -373,6 +376,7 @@ a {
     font-weight: 600;
     line-height: 36px;
   }
+  
 }
 @media (max-width: 1023px) {
   h2 {

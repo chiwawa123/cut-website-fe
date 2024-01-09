@@ -66,11 +66,13 @@
 }
 .sm-white{
     background-color: #fff !important;
+    
 }
 
 .img-box{
-    background-color: #efeeee;
-    box-shadow: 1px 1px 3px #828282;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 4px #828282;
+   
     
 }
 
@@ -112,4 +114,25 @@ h4{
 .blg{
     font-weight: 900;
     margin-bottom: 30px;
+}
+
+.card-shadow{
+    position: relative;
+    bottom: 23px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background-color: #101010;
+    opacity: 0.7;
+    
+ 
+}
+.size-md{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 3px;
+    padding-right: 50px;
+    
+   
 }
