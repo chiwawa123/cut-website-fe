@@ -1,0 +1,20 @@
+.text-whyte{
+    color: #fff;
+    text-shadow: 1px 2px 2px black;
+  }
+
+  .whyte{
+    color: #fff;
+   
+  }
+
+  ul li {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-weight: 200;
+}
+
+ul {
+    font-weight: 600;
+    font-size: 1rem;
+}
