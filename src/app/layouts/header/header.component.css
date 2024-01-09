@@ -1,0 +1,12 @@
+.header__topleftmenu li {
+    background: #fff;
+    content: "";
+    width: 1px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
