@@ -22,3 +22,9 @@ ul {
 h4{
     font-size: 20px;
 }
+
+.bg-opac{
+  background-color: #181819;
+  opacity: 0.6;
+
+}
