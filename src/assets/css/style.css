@@ -33,6 +33,7 @@ font-family: 'Poppins', sans-serif;
 .navbar{
   background-color: #fff;
   height: 70px;
+ 
 
 }
 
@@ -518,7 +519,7 @@ ul.list-styled {
   outline: 0;
   height: 2.4rem;
   width: 2.4rem;
-  margin-left: 13rem;
+  margin-left: 12rem;
   
 }
 #navbar .navbar-burger span {
