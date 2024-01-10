@@ -64,6 +64,8 @@
 .card-bg{
     background-color: #fff;
     border-radius: 20px;
+   
+   
  
 
 }
@@ -74,8 +76,11 @@
 
 .img-box{
     background-color:#fff;
-    box-shadow: 1px 1px 3px #a3a1a1;
+    box-shadow: 1px 1px 3px #c5c3c3;
     border-radius: 3px;
+    padding-left: 50px;
+    max-height: 200px;
+    padding-top: 10px;
 }
 
 .small {
