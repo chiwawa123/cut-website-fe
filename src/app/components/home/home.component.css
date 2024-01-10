@@ -54,6 +54,12 @@
     display: flex;
     padding: 0px 10px;
 }
+
+.bard:hover,
+    .cardo:focus-within {
+      transform: scale(1.05);
+      transition: transform 500ms ease-in;
+    }
 .height-line{
     line-height: normal;
     list-style: none;
