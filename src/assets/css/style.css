@@ -69,6 +69,7 @@ p {
 
 .navbar-toggle .icon-bar {
   background: #CAA350;
+  
 }
 
 input[type=email], input[type=password], input[type=text], input[type=tel] {
@@ -513,10 +514,12 @@ ul.list-styled {
   border: 0;
   margin-top: 11px;
   color: #fff;
-  background-color: #CAA350;
+  background-color: #24b0ed;
   outline: 0;
-  height: 2.8rem;
-  width: 2.8rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-left: 13rem;
+  
 }
 #navbar .navbar-burger span {
   left: calc(49% - 7px);
