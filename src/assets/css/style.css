@@ -355,6 +355,13 @@ a {
   .p-5 {
     padding: 2rem !important;
   }
+  .flex{
+    text-decoration: none;
+    color: #101010;
+    margin-left: 2px !important;
+  }
+  
+  
   .pd-left{
     padding-left: 30% !important;
   }
@@ -430,6 +437,15 @@ a {
 @media (max-width: 575px) {
   .p-5 {
     padding: 2rem !important;
+  }
+  .flex{
+    text-decoration: none;
+    color: #101010;
+    margin: 0px auto !important;
+  }
+  .cardd{
+  margin: 0px auto;
+    width:310px !important;
   }
   .pd-left{
     padding-left: 30% !important;
@@ -614,12 +630,11 @@ ul.list-styled {
 #navbar .navbar-burger {
   border: 0;
   margin-top: 11px;
-  color: #fff;
-  background-color: #24b0ed;
+  color: #c06a07;
+  background-color: #ffffff;
   outline: 0;
   height: 2.4rem;
-  width: 2.4rem;
-  margin-left: 12rem;
+ 
   
 }
 #navbar .navbar-burger span {
