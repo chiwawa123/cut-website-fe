@@ -6,6 +6,7 @@
   
 }
 
+
 .carousel-caption {
     position: absolute;
     top: 50%;
@@ -14,11 +15,13 @@
     text-align: center;
     color: #fff;
     height: 100px;
-    background-color: #101010;
+    background-color: #1e1b1b9c;
     opacity: 0.7;
     border-bottom: 2px solid #CAA350;
     border-top: 2px solid #CAA350;  
   }
+
+  
 
 .clr{
     border-bottom: 10px solid #CAA350;
@@ -36,13 +39,13 @@
     margin-left: 0;
     margin-right: 0;
     justify-content: center;
-    background-color: #CAA350;
+    background-image: linear-gradient( to right,#24b0ed,#caa350,#24b0ed);
 }
 .pd{
     margin-left: 0;
     margin-right: 0;
     justify-content: center;
-    background-color: #24b0ed;
+     background-image: linear-gradient( to right,#24b0ed,#24b0ed,#caa350);
 }
 .pg{
     margin-left: 0;
@@ -58,7 +61,9 @@
 .bard:hover,
     .cardo:focus-within {
       transform: scale(1.05);
-      transition: transform 500ms ease-in;
+      transition: transform 500ms ease-in; 
+      cursor: pointer; 
+      
     }
 .height-line{
     line-height: normal;
@@ -79,6 +84,8 @@
     background-color: #fff !important;
    
 }
+
+
 
 .img-box{
     background-color:#fff;
@@ -122,15 +129,16 @@ h4{
 
 
 .medium-size{
-    font-size: 80%;
+    font-size: 60%;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1rem;
+    text-align: justify;
 }
 .blg{
-    font-weight: 900;
+    font-weight: bold;
     margin-bottom: 30px;
-    font-size: 32px;
+    font-size: 22px;
     text-align: center;
 }
 

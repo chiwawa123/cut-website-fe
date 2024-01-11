@@ -10,3 +10,16 @@
     margin: auto;
 }
 
+.wt{
+    width: 120px;
+    font-size: 14px;
+    line-height: normal;
+   
+}
+
+.flash {
+    transition: color 0.5;
+    transform: scale(1);
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
