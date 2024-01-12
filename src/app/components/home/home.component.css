@@ -31,8 +31,11 @@
     background-color: #fff;
     border-radius: 25px;
     transform: translateY(-90px);
-    border-bottom: 2px solid #CAA350;
     border-top: 2px solid #CAA350;  
+
+    box-shadow: 0 20px 16px rgba(10,10,10,.1);
+    border-top: 2px solid #CAA350;
+    padding: 16px;
 }
 
 .pl{
@@ -58,13 +61,14 @@
     display: flex;
     padding: 0px 10px;
 }
+.
+
 
 .bard:hover,
     .cardo:focus-within {
       transform: scale(1.05);
       transition: transform 500ms ease-in; 
       cursor: pointer; 
-      
     }
 .height-line{
     line-height: normal;
@@ -136,6 +140,7 @@ h4{
     font-size: 1rem;
     line-height: 1rem;
     text-align: justify;
+    color: #fff;
 }
 .blg{
     font-weight: bold;
