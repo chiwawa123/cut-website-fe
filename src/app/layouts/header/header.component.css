@@ -64,7 +64,7 @@ input, optgroup, select, textarea {
 .wt{
     width: 120px;
     font-size: 14px;
-    line-height: normal;
+    border-radius: 1rem;
    
 }
 .top0links{
