@@ -9,23 +9,16 @@
 
 .carousel-caption {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20%;
     text-align: center;
     color: #fff;
-    height: 100px;
-    background-color: #1e1b1b9c;
-    opacity: 0.7;
-    border-bottom: 2px solid #CAA350;
-    border-top: 2px solid #CAA350;  
+    height: 300px;
+    padding-top: 7%;
+    background-color: #1e1b1b7c;
+
   }
 
   
-
-.clr{
-    border-bottom: 10px solid #CAA350;
-}
 
 .cardd{
     background-color: #fff;
@@ -170,18 +163,6 @@ h4{
    
 }
 
-
-
-body {
-    font-family: "Oxygen", sans-serif;
-    color: #050505;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
   
   .main {
     max-width: 1200px;
@@ -741,4 +722,119 @@ footer {
   max-height:500px; 
   width: 100%;
    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.txt-1{
+  background: transparent;
+  animation: slideup 1s ease-in-out forwards ;
+  text-shadow: #000000;
+
+
+
+  z-index: 10;
+  font-family: Roboto Slab;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  white-space: normal;
+  letter-spacing:0px;
+  font-weight: 500;
+  font-size: 60px;
+
+ 
+
+}
+
+
+@keyframes slideup {
+
+  0%{
+    transform:scale(0) translateY(1000px);
+  }
+  100%{
+    transform:scale(1) translateY(0);
+  }
+}
+
+
+.txt-3 {
+
+  animation: slidebottom 2s ease-in-out;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 600;
+  padding: 10px;
+}
+
+@keyframes slidebottom {
+  0% {
+    transform: translateY(-800%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.typed {
+  width: 20ch;
+  margin-left: 26%;
+  animation: typing 3s steps(22), blink .5s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  
+ 
+}
+
+@keyframes typing {
+  from {
+    width: 0px
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+.txt-2 {
+
+  animation: slideright 1s ease-in-out;
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(-1000%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
