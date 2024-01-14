@@ -37,12 +37,28 @@ input, optgroup, select, textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
-    line-height: inherit;
-    width: -moz-available;
+    line-height:1.6rem;
+    width:100%;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-bottom: 10px; 
+    padding: 0px 0.75rem;
+    outline: #fff;
+
+  }
+
+  .form-control {
+
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid #9f9e9b;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
 
 .wt{

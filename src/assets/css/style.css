@@ -13,14 +13,14 @@ html {
 
 body {
   line-height: 1.7;
-  font-family: 'Poppins', sans-serif;
+  font-family: Roboto Slab;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: #464646;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-font-family: 'Poppins', sans-serif;
+  font-family: Roboto Slab;
   font-weight: 900;
   color: #232323;
 }
@@ -58,14 +58,7 @@ h4, .h4 {
   line-height: 30px;
 }
 
-.mc-5{
-  padding-left: 14% !important;
 
-}
-.mc-6{
-  padding-left: 14% !important;
-
-}
 
 h5, .h5 {
   font-size: 18px;
@@ -375,6 +368,17 @@ a {
   .p-5 {
     padding: 2rem !important;
   }
+ 
+
+  .txt-1{
+    font-size: 17px !important;
+ 
+  }
+  .txt-3{
+    font-size: 12px !important;
+    padding-bottom: 10px !important;
+  }
+
   .flex{
     text-decoration: none;
     color: #101010;
@@ -386,14 +390,8 @@ a {
     padding-left: 33% !important;
     padding-right: 33% !important;
   }
-  .mc-5{
-    padding-left: 33% !important;
-    padding-right: 33% !important;
-  }
-  .mc-6{
-    padding-left: 25% !important;
-    padding-right: 25% !important;
-  }
+  
+ 
 
   #navbar .navbar-burger {
     margin-left: 16rem !important;
@@ -460,6 +458,15 @@ a {
 @media (max-width: 575px) {
   .p-5 {
     padding: 2rem !important;
+  }
+
+  .txt-1{
+    font-size: 17px !important;
+ 
+  }
+  .txt-3{
+    font-size: 12px !important;
+    padding-bottom: 10px !important;
   }
   .flex{
     text-decoration: none;
@@ -656,13 +663,12 @@ ul.list-styled {
 }
 #navbar .navbar-burger {
   border: 0;
-  margin-top: 11px;
+  margin-top: 0px;
   color: #CAA350;
   outline: 0;
-  transform: translateY(-96px);
+  position: absolute;
   height: 2.4rem;
- 
-  
+  right: 0; /* Add this line to position the button to the right */
 }
 
 
@@ -718,6 +724,7 @@ ul.list-styled {
 #navbar li.navbar-item:last-child .navbar-link {
   padding-right: 0;
   text-decoration: none !important;
+
 }
 @media (max-width: 1023px) {
   #navbar li.navbar-item:last-child .navbar-link {
@@ -725,13 +732,13 @@ ul.list-styled {
   }
 }
 #navbar .navbar-link {
-  font-family: "Montserrat", sans-serif;
-  color: #0a0a0a;
+  font-family: Roboto Slab;
+  color: #0a0a0abc;
   background-color: transparent !important;
   text-transform: capitalize;
-  font-weight: 200;
+  font-weight: 600;
   text-decoration: none;
-  padding: 17px 17px;
+  padding: 17px 14px;
   transition: all 0.25s ease;
 }
 @media (max-width: 1215px) {
@@ -879,8 +886,8 @@ ul.list-styled {
   padding: 0rem 1.5rem;
   font-size: 14px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  color: #000;
+  font-family: 'Roboto',slab;
+  color: #0a0a0abc;
   text-decoration: none;
   border-bottom: 3px solid rgba(0, 0, 0, 0.03);
   
