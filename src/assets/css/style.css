@@ -789,10 +789,10 @@ ul.list-styled {
 }
 .header-top .top-btn {
   padding: 3px 25px;
-  background: #CAA350;
+  background: #fff;
   line-height: 30px;
-  border-radius: 60px;
-  color: #fff;
+  border: #CAA350 1px solid;
+  color: #24b0ed;
   text-decoration: none;
 }
 @media (max-width: 400px) {
@@ -807,7 +807,7 @@ ul.list-styled {
   }
 }
 .header-top .top-btn:hover {
-  background: #203389;
+  background: #cccaca;
 }
 .header-top .header-top-right a {
   margin: 0 10px;
@@ -2170,4 +2170,30 @@ input[type="radio"]:checked + .page{
   width: 500px;
   margin: 0 auto;
   padding-top: 20px;
+}
+
+
+#neonShadow{
+
+
+  transition:0.3s;
+  animation: glow 1s infinite ;
+  transition:0.5s;
+}
+
+#neonShadow:hover{
+  transform:translateX(-20px)rotate(20deg);
+  transition:0.5s;
+}
+
+@keyframes glow{
+  0%{
+  box-shadow: 5px 5px 20px rgb(168, 135, 52),-5px -5px 20px rgb(168, 139, 52);}
+  
+  50%{
+  box-shadow: 5px 5px 20px rgb(202, 160, 45),-5px -5px 20px rgb(168, 143, 18)
+  }
+  100%{
+  box-shadow: 5px 5px 20px rgb(47, 150, 234),-5px -5px 20px rgb(49, 108, 185)
+  }
 }
