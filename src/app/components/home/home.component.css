@@ -336,7 +336,7 @@ h4{
     max-width: 21.875rem;
     overflow: hidden;
     border-radius: 0rem;
-    margin: 23px;
+    margin: 23px auto;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
     
   }
@@ -849,6 +849,9 @@ footer {
 .blue-square{
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
  
-  background-color: #e8eaebe6;
+}
+
+.btn{
+  border-color: #24b0ed;
 }
 
