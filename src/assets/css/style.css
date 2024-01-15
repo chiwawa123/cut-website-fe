@@ -375,6 +375,10 @@ a {
   .clipped img {
     height: 2.5rem !important;
 }
+ul.navbar-end {
+  margin-top: 10px;
+  margin-bottom: 1rem;
+}
  
 
   .txt-1{
@@ -538,9 +542,11 @@ a {
     box-shadow: 0 8px 16px rgba(10,10,10,.1);
     padding: 0.5rem 0;
     width: 100%;
+    
 
-    margin-top: -98px !important;
+    margin-top: -65px !important;
 }
+
 }
 @media (max-width: 1023px) {
   .container {
@@ -675,18 +681,10 @@ ul.list-styled {
     padding: 1rem 0;
   }
 }
+
 #navbar .navbar-burger {
   border: 0;
   margin-top: 0px;
-  color: #CAA350;
-  outline: 0;
-  position: absolute;
-  height: 2.4rem;
-  right: 0; /* Add this line to position the button to the right */
-}
-#navbar .navbar-burger {
-  border: 0;
-  margin-top: 11px;
   color: #CAA350;
   outline: 0;
   position: absolute;
@@ -2056,6 +2054,10 @@ h3.quote::before {
   .footer-socials li a {
     margin-left: 0px;
   }
+
+  .center-style{
+    text-align: center;
+  }
 }
 @media (max-width: 575px) {
   .footer-socials {
@@ -2063,6 +2065,10 @@ h3.quote::before {
   }
   .footer-socials li a {
     margin-left: 0px;
+  }
+
+  .center-style{
+    text-align: center;
   }
 
 }
