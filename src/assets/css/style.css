@@ -145,6 +145,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   color: #fff;
 }
 
+
 .btn-solid-border {
   border: 2px solid #CAA350;
   background: transparent;
@@ -286,7 +287,32 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 .text-brown{
   color: #CAA350;
 }
+.white-card-links {
+  display: flex;
+  justify-content:space-around !important;
+  padding: 5px;
+}
 
+.white-card-links li {
+  list-style-type: none;
+}
+
+.white-card-links a {
+  text-decoration: none;
+  line-height: normal;
+  font-size: 14px;
+  color: #eaeced;
+  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+}
+
+.white-card-links a:hover {
+  color: #fff;
+  background-color: #caa350;
+}
+
+.crdd .white-card-links a {
+  color: #000;
+}
 
 
 .text-black {
@@ -325,7 +351,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #435AC3;
+  color: #CAA350;
   text-decoration: none;
 }
 
@@ -361,6 +387,25 @@ a:focus {
 a {
   transition: all 0.4s ease 0s;
 }
+.unlock-btn{
+
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 0px 20px;
+  background-color: #24b0ed !important;
+  margin: 10px;
+  color: #fff !important;
+ 
+}
+.wrapp h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(10,10,10,.1);
+  
+}
+
+
 
 .section-divider {
   width: 100%;
@@ -372,8 +417,29 @@ a {
   .p-5 {
     padding: 2rem !important;
   }
+  .white-card-links {
+    margin-left: 33px !important;
+  }
+  .unlock-btn{
+    font-size: 10px !important;
+    margin: 10px;
+    
+  }
+  ol, ul {
+    padding-left: 0rem !important;
+}
+  .wrapp h2 {
+    font-size: 15px !important;
+  }
   .clipped img {
     height: 2.5rem !important;
+}
+.crd{
+  display: block !important;
+}
+.wrapp h2 {
+  font-size: 15px;
+  
 }
 ul.navbar-end {
   margin-top: 10px;
@@ -470,8 +536,36 @@ ul.navbar-end {
   .p-5 {
     padding: 2rem !important;
   }
+  .white-card-links {
+    display: flex;
+    justify-content:space-around !important;
+    padding: 5px;
+    margin-left: 43px;
+  }
+  .crd{
+    display: block !important;
+  }
+  ol, ul {
+    padding-left: 0rem !important;
+    display: block !important;
+}
+
+  .unlock-btn{
+    font-size: 10px !important;
+    margin: 10px;
+    
+  }
+  .wrapp h2 {
+    font-size: 15px !important;
+  }
+  
+
   .clipped img {
     height: 2.5rem !important;
+}
+.wrapp h2 {
+  font-size: 15px;
+  
 }
 
   .txt-1{
@@ -737,6 +831,13 @@ ul.list-styled {
 
 #navbar li.navbar-item {
   padding: 0;
+
+
+}
+
+
+.navbar-item .navbar-link:hover{
+  transition: left 0.3s ease;
 }
 
 #navbar li.navbar-item:last-child .navbar-link {
@@ -915,6 +1016,8 @@ ul.list-styled {
   background: #CAA350 !important;
   color: #fff !important;
 }
+
+
 @media (max-width: 1023px) {
   .navbar-dropdown .navbar-item {
     padding: 0.6rem 1.5rem;
@@ -1256,8 +1359,8 @@ ul.list-styled {
   right: 0px;
   top: 0px;
   width: 100%;
-  height: 70%;
-  background: url("../images/about/banner.jpg") no-repeat;
+  height: 55%;
+  background: url("../images/bg/bg1.png") no-repeat;
   background-size: cover;
 }
 
