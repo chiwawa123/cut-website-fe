@@ -302,12 +302,12 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   line-height: normal;
   font-size: 14px;
   color: #eaeced;
-  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+
 }
 
 .white-card-links a:hover {
   color: #fff;
-  background-color: #caa350;
+
 }
 
 .crdd .white-card-links a {
@@ -417,6 +417,11 @@ a {
   .p-5 {
     padding: 2rem !important;
   }
+  
+.tab-vertical .tab-content {
+
+  display: block  !important;
+}
   .white-card-links {
     margin-left: 33px !important;
   }
@@ -536,6 +541,18 @@ ul.navbar-end {
   .p-5 {
     padding: 2rem !important;
   }
+
+  .tab-vertical .tab-content {
+
+    display: block !important;
+  }
+  .tab-vertical .nav.nav-tabs {
+    /* float: left; */
+    display: block;
+    margin-right: 0px;
+    border-bottom: 0;
+    width: 100% !important;
+}
   .white-card-links {
     display: flex;
     justify-content:space-around !important;

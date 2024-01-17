@@ -172,7 +172,7 @@ p:last-child {
 .white{
   color: #fff;
 }
-.blue{
+.bl{
   color: #24b0ed;
 }
 
@@ -289,7 +289,6 @@ blockquote{
   font-style: italic;
   position: relative;
   text-align: center;
-  z-index: 20;
 }
 .left{
   position: absolute;
@@ -297,7 +296,6 @@ blockquote{
   left: -20px;
   width: 150px;
   text-align: left;
-  z-index: 10;
   font-size: 2rem;
   color: #24b0ed;
 
@@ -319,10 +317,14 @@ small{
   font-size: 1rem;
   color: #24b0ed;
   position: relative;
-  z-index: 20;
-  
   &:before{
     content: "\2014 \0020";
     width: 5px;
   }
+}
+
+.vertical-l{
+  color: #a02727;
+  transform:rotateY('angle');
+  
 }
