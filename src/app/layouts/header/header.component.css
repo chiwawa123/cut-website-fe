@@ -72,6 +72,7 @@ input, optgroup, select, textarea {
 }
 .top0links{
     display: flex;
+    padding-bottom: 5px;
 
 }
 
@@ -91,6 +92,10 @@ input, optgroup, select, textarea {
     
  
 }
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem !important;
+}
 
 .clipped img {
     height: 5rem;
@@ -102,4 +107,73 @@ input, optgroup, select, textarea {
 
 .top-links{
     display: flex;
+ 
 }
+
+.flash {
+    transition: color 0.5;
+    animation-name: flashy;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes flashy{
+
+0% {
+    color: skyblue;
+}
+35% {
+    color: white;
+    transform: scale(0.851);
+}
+50% {
+    color: skyblue;
+    transform: scale(1);
+}
+
+85% {
+    color: black;
+    transform: scale(1.051);
+}
+100% {
+    color: skyblue;
+    transform: scale(1);
+}
+}
+
+
+
+/* CSS for the sliding link */
+.track-link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .track-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .track-link a:hover {
+    transform: translateX(100%);
+  }
+  
+  /* CSS for the blinking effect */
+  @keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .track-link a span {
+    animation: blink 1s infinite;
+  }
+
+    

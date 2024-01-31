@@ -9,7 +9,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AdmissionsComponent } from './components/admissions/admissions.component'
-
+import { NgbCarouselConfig, NgbSlideEvent } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { AdmissionsComponent } from './components/admissions/admissions.componen
     NgbModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [NgbCarouselConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

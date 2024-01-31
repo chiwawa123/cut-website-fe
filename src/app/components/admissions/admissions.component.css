@@ -250,7 +250,9 @@ a:hover {
   background: #fff;
   padding: 30px;
   display: flex;
- 
+}
+.flex-display-content{
+  display: flex;
 }
 
 .text-brown{

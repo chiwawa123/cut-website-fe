@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  line-height: 1.7;
-  font-family: Roboto Slab;
+  line-height: 1.4;
+  font-family: 'Poppins';
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: #464646;
@@ -32,7 +32,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .navbar{
   background-color: #fff;
-  height: 60px;
+  height: 80px;
   box-shadow: 0 20px 16px rgba(10,10,10,.4);
 
 }
@@ -417,6 +417,10 @@ a {
   .p-5 {
     padding: 2rem !important;
   }
+
+  .flex-display-content{
+    display: block !important;
+  }
   
 .tab-vertical .tab-content {
 
@@ -540,6 +544,9 @@ ul.navbar-end {
 @media (max-width: 575px) {
   .p-5 {
     padding: 2rem !important;
+  }
+  .flex-display-content{
+    display: block !important;
   }
 
   .tab-vertical .tab-content {
@@ -870,18 +877,18 @@ ul.list-styled {
 
 
 #navbar .navbar-link {
-  font-family: Roboto Slab;
-  color: #0a0a0abc;
+  font-family: 'Roboto Slab';
+  color: #555 !important;
   background-color: transparent !important;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
-  padding: 17px 14px;
+  padding: 3px 15px;
   transition: all 0.25s ease;
 }
 @media (max-width: 1215px) {
   #navbar .navbar-link {
-    padding: 20px 14px;
+    padding: 10px 14px;
     font-size: 15px;
   }
 }
@@ -902,8 +909,8 @@ ul.list-styled {
   border-bottom: 1px solid rgba(146, 90, 35, 0.179);
   font-size: 13px;
   background-color: #24b0ed;
-  border-bottom: 3px solid #CAA350;
   align-items: center;
+  background: linear-gradient(45deg, #24b0ed 74%, #EBF8FF 46%);
   margin-top: 2px;
 
 }
@@ -914,10 +921,10 @@ ul.list-styled {
 }
 .header-top .top-btn {
   padding: 3px 25px;
-  background: #fff;
+  background: #24b0ed;
   line-height: 25px;
   border: #CAA350 1px solid;
-  color: #24b0ed;
+  color: #fff;
   text-decoration: none;
 }
 @media (max-width: 400px) {
@@ -986,7 +993,7 @@ ul.list-styled {
   z-index: -1;
   border: #000;
   text-decoration: none;
-  margin-top: -12px;
+
 
 
 }
@@ -1030,7 +1037,7 @@ ul.list-styled {
   
 }
 .navbar-dropdown .navbar-item:hover {
-  background: #CAA350 !important;
+  background: #24b0ed !important;
   color: #fff !important;
 }
 
