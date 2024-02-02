@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AdmissionsComponent } from './components/admissions/admissions.component'
 import { NgbCarouselConfig, NgbSlideEvent } from '@ng-bootstrap/ng-bootstrap';
+import { SchoolComponent } from './components/school/school.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgbCarouselConfig, NgbSlideEvent } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    AdmissionsComponent
+    AdmissionsComponent,
+    SchoolComponent
   ],
   imports: [
     BrowserModule,
