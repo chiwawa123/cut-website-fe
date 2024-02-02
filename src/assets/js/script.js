@@ -12,6 +12,9 @@ $(document).ready(function () {
     });
   }
 
+
+ 
+
   // Other code...
 
   // Counter
