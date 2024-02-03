@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AdmissionsComponent } from './components/admissions/admissions.component'
 import { NgbCarouselConfig, NgbSlideEvent } from '@ng-bootstrap/ng-bootstrap';
 import { SchoolComponent } from './components/school/school.component';
+import { DirectorateComponent } from './components/directorate/directorate.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SchoolComponent } from './components/school/school.component';
     HeaderComponent,
     FooterComponent,
     AdmissionsComponent,
-    SchoolComponent
+    SchoolComponent,
+    DirectorateComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

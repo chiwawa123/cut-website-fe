@@ -718,9 +718,7 @@ ul.navbar-end {
 }
 
 .columns {
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-top: -15px;
+  margin: 0px auto !important;
 }
 
 .columns:last-child {
