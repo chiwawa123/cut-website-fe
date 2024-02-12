@@ -560,6 +560,30 @@ ul.navbar-end {
   .text-md {
     font-size: 2rem;
   }
+
+  .slider-up{
+    transform:translateX(0px) !important;
+  }
+  .bg-blue{
+    height: 30vh !important;
+  }
+  .caption-txt{
+    width: 100% !important;
+    padding: 24px 10px !important;
+  }
+  .schedule .schedule-inner {
+    transform: translateY(-5%) !important;
+  }
+
+  .caption-txt p{
+  font-size: 11px !important  ;
+  }
+  .caption-txt h2{
+    font-size: 17px !important  ;
+  }
+  .flex-disp{
+    display: block !important;
+  }
 }
 @media (max-width: 575px) {
   .p-5 {
@@ -2256,11 +2280,11 @@ h3.quote::before {
     transform:translateX(0px) !important;
   }
   .bg-blue{
-    height: 35vh !important;
+    height: 30vh !important;
   }
   .caption-txt{
     width: 100% !important;
-    padding: 35px 10px !important;
+    padding: 24px 10px !important;
   }
   .schedule .schedule-inner {
     transform: translateY(-5%) !important;
