@@ -13,6 +13,7 @@ import { NgbCarouselConfig, NgbSlideEvent } from '@ng-bootstrap/ng-bootstrap';
 import { SchoolComponent } from './components/school/school.component';
 import { DirectorateComponent } from './components/directorate/directorate.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProgramComponent } from './components/program/program.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AboutComponent } from './components/about/about.component';
     AdmissionsComponent,
     SchoolComponent,
     DirectorateComponent,
-    AboutComponent
+    AboutComponent,
+    ProgramComponent
   ],
   imports: [
     BrowserModule,
