@@ -440,6 +440,10 @@ a {
 
   .flex-display-content{
     display: block !important;
+    flex-direction: row;
+  }
+  .col-md-8.slider-up {
+    order: -1 !important;
   }
 
 .tab-vertical .tab-content {
@@ -561,7 +565,7 @@ ul.navbar-end {
     font-size: 2rem;
   }
 
-  .slider-up{
+    .slider-up{
     transform:translateX(0px) !important;
   }
   .bg-blue{
@@ -574,7 +578,6 @@ ul.navbar-end {
   .schedule .schedule-inner {
     transform: translateY(-5%) !important;
   }
-
   .caption-txt p{
   font-size: 11px !important  ;
   }
@@ -583,6 +586,7 @@ ul.navbar-end {
   }
   .flex-disp{
     display: block !important;
+    flex-direction: column;
   }
 }
 @media (max-width: 575px) {
@@ -591,6 +595,7 @@ ul.navbar-end {
   }
   .flex-display-content{
     display: block !important;
+    flex-direction: column;
   }
 
   .tab-vertical .tab-content {
@@ -716,6 +721,76 @@ ul.navbar-end {
   }
 
 }
+@media (min-width: 769px) and (max-width: 1023px) {
+  .slider-up{
+    transform:translateX(-380px) !important;
+  }
+  .bg-blue{
+    height: 40vh !important;
+  }
+  .caption-txt{
+    width: 250px !important;
+    padding: 65px 10px !important;
+  }
+
+  .caption-txt p{
+  font-size: 11px !important  ;
+  }
+  .caption-txt h2{
+    font-size: 17px !important  ;
+  }
+  .schedule .schedule-inner {
+    transform: translateY(-35%) !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .slider-up{
+    transform:translateX(-510px) !important;
+  }
+  .bg-blue{
+    height: 40vh !important;
+  }
+  .caption-txt{
+    width: 300px !important;
+    padding: 135px 10px !important;
+  }
+  .caption-txt p{
+  font-size: 11px !important  ;
+  }
+  .caption-txt h2{
+    font-size: 17px !important  ;
+  }
+  .schedule .schedule-inner {
+    transform: translateY(-35%) !important;
+  }
+}
+
+@media (min-width: 1280px){
+  .slider-up{
+    transform:translateX(-75%) !important;
+  }
+  .bg-blue{
+    height: 70vh !important;
+  }
+  .caption-txt{
+    width: 400px !important;
+    padding: 135px 30px !important;
+  }
+  .caption-txt p{
+  font-size: 1rem !important  ;
+  }
+  .caption-txt h2{
+    font-size: 1.5rem !important  ;
+  }
+  .schedule .schedule-inner {
+    transform: translateY(-35%) !important;
+  }
+
+}
+@media (min-width: 1367px) {
+  /* CSS rules for large desktops and high-resolution screens */
+  /* Add your styles here */
+}
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
@@ -728,11 +803,12 @@ ul.navbar-end {
     padding: 0px 6px !important;
 }
 
+
 .slider-up{
   transform:translateX(-380px) !important;
 }
 .bg-blue{
-  height: 55vh !important;
+  height: 40vh !important;
 }
 .caption-txt{
   width: 250px !important;
@@ -744,6 +820,12 @@ font-size: 11px !important  ;
 }
 .caption-txt h2{
   font-size: 17px !important  ;
+}
+.schedule .schedule-inner {
+  transform: translateY(-20%) !important;
+}
+.v-height{
+  margin-top: 420px !important;
 }
 
 
@@ -2298,6 +2380,7 @@ h3.quote::before {
   }
   .flex-disp{
     display: block !important;
+     flex-direction: column;
   }
 
 }
@@ -2488,7 +2571,6 @@ input[type="radio"]:checked + .page{
   visibility: visible;
   opacity: 1;
 }
-
 .schedule {
 	background: #fff;
 	margin: 0;
@@ -2503,6 +2585,7 @@ input[type="radio"]:checked + .page{
 .schedule .single-schedule {
 	position: relative;
 	text-align: left;
+  height: 250px;
 	z-index:3;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 	background:#fff;
@@ -2625,36 +2708,6 @@ input[type="radio"]:checked + .page{
 .schedule .single-schedule .day-head .time {
 	font-weight: 400;
 	float: right;
-}
-/*=============================
-	End Schedule CSS
-
-
-  /* Large devices (tablets) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .slider-up{
-    transform:translateX(-380px) !important;
-  }
-  .bg-blue{
-    height: 35vh !important;
-  }
-  .caption-txt{
-    width: 250px !important;
-    padding: 65px 10px !important;
-  }
-
-  .caption-txt p{
-  font-size: 11px !important  ;
-  }
-  .caption-txt h2{
-    font-size: 17px !important  ;
-  }
-
-
-  .full{
-    width: 100% !important;
-  }
-
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
