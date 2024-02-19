@@ -32,7 +32,7 @@ header {
 
 input, optgroup, select, textarea {
     margin: 0;
-    font-family: 'Poppins';
+    font-family: 'Open Sans';
     font-size: inherit;
     line-height:1.6rem;
     width:100%;

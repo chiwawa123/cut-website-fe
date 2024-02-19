@@ -11,14 +11,14 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: 'Poppins','Sans-Serif';
+  font-family: 'Open Sans','Sans-Serif';
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: #464646;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: 'Poppins';
+  font-family: 'Open Sans';
   font-weight: 900;
   color: #232323;
 }
@@ -234,7 +234,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 .section-title p {
   color: #666;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .subtitle {
@@ -1025,7 +1025,7 @@ ul.list-styled {
 
 
 #navbar .navbar-link {
-  font-family: 'Poppins';
+  font-family: 'Open Sans';
   color: #555 !important;
   background-color: transparent !important;
   text-transform: capitalize;
@@ -1191,7 +1191,7 @@ ul.list-styled {
   padding: 0rem 1.5rem;
   font-size: 14px;
   font-weight: 600;
-  font-family: 'Poppins';
+  font-family: 'Open Sans';
   color: #0a0a0abc;
   text-decoration: none;
   border-bottom: 3px solid rgba(0, 0, 0, 0.03);
@@ -1581,7 +1581,7 @@ ul.list-styled {
 }
 .counter-item h3 {
   margin-bottom: 0px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #CAA350;
 }
 
@@ -1593,7 +1593,7 @@ ul.list-styled {
   font-size: 70px;
   font-weight: 800;
   line-height: 1.1;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .counter-item-2 p {
   margin-bottom: 0px;
@@ -1830,13 +1830,13 @@ ul.list-styled {
   font-size: 14px;
 }
 .address-block li h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   color: #000;
 }
 
 .social-icons h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   color: #000;
 }
