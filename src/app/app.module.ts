@@ -14,6 +14,10 @@ import { SchoolComponent } from './components/school/school.component';
 import { DirectorateComponent } from './components/directorate/directorate.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProgramComponent } from './components/program/program.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { VacanciesComponent } from './components/vacancies/vacancies.component';
+import { AlumniComponent } from './components/alumni/alumni.component';
+import { FaqsComponent } from './components/faqs/faqs.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { ProgramComponent } from './components/program/program.component';
     SchoolComponent,
     DirectorateComponent,
     AboutComponent,
-    ProgramComponent
+    ProgramComponent,
+    ContactComponent,
+    VacanciesComponent,
+    AlumniComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule,

@@ -226,6 +226,7 @@ h4{
     margin: 0 0 24px;
     font-size: 14px;
     line-height: 1.5;
+    padding: 10px;
   }
 
   .card_text p:last-child {
