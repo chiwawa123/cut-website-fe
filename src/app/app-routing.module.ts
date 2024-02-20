@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AlumniComponent } from './components/alumni/alumni.component';
 import { VacanciesComponent } from './components/vacancies/vacancies.component';
 import { VacancyHomeComponent } from './components/vacancy-home/vacancy-home.component';
+import { FaqsComponent } from './components/faqs/faqs.component';
 
 const routes: Routes = [
   { path:'',component:HomeComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'program',component:ProgramComponent},
   {path:'alumni',component:AlumniComponent},
   {path:'vacancies',component:VacanciesComponent},
-  {path:'vacancy-home',component:VacancyHomeComponent}
+  {path:'vacancy-home',component:VacancyHomeComponent},
+  {path:'faqs',component:FaqsComponent}
 ];
 
 @NgModule({
