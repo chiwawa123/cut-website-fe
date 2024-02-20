@@ -1,0 +1,77 @@
+.crd {
+
+  background: rgba(0, 0, 0, 0.596);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-200px);
+  display: flex;
+  max-width: 57%;
+  padding: 0px 30px;
+  margin: 0px auto;
+
+
+}
+
+.banner {
+  height: 300px;
+  width: 100%;
+  background-color: #f0f0f0;
+  background-blend-mode: overlay;
+
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  background-blend-mode: overlay;
+}
+.landing-intro {
+  font-size: min( (1rem + 1vw), 21px);
+  font-weight: 400;
+  margin: 1rem 0 2rem 0;
+
+}
+.alumni-join-btn{
+  text-decoration: none;border: 2px solid #24b0ed;color: #24b0ed;
+  background-color: #fff;
+}
+.alumni-h1{
+  color: #24b0ed;
+  font-weight: 600;
+}
+.alumni-event-h1{
+  color: #fff;
+
+}
+.alumni-event-p{
+  color: #fff;
+
+}
+.alumni-ben{
+  color: #24b0ed;
+}
+.alumni-benefits{
+  padding-top: 7rem;
+}
+.alumni-benefit{
+  padding-top: 3rem;
+  -webkit-box-shadow: -1px 3px 5px 0px rgba(189,189,189,1);
+-moz-box-shadow: -1px 3px 5px 0px rgba(189,189,189,1);
+box-shadow: -1px 3px 5px 0px rgba(189,189,189,1);
+}
+.alumni-p{
+  text-align: justify;
+}
+.alumni-assoc{
+  padding-top: 8rem;
+}
+.assoc-alumni{
+  background-color: #24b0ed;
+}
+.join-alum-assoc{
+  color: #fff;
+}
+

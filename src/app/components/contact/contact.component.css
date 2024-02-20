@@ -30,16 +30,21 @@
 }
 
 .general_query {
-  background-color: #24b1ed3f;
+  background-color: #F2F2F2;
   color: #24b0ed;
   padding-left: 10%;
   padding-right: 10%;
   margin-bottom: 5%;
-  height: 335px;
-  text-align: center;
-  line-height: 15px;
+  height: 350px;
+  line-height: 11px;
   padding-top: 30px;
+  -webkit-box-shadow: -2px 4px 5px 0px rgba(179,179,179,0.78);
+  -moz-box-shadow: -2px 4px 5px 0px rgba(179,179,179,0.78);
+  box-shadow: -2px 4px 5px 0px rgba(179,179,179,0.78);
 }
 .flex{
   display: flex;
+}
+.sp-left{
+  margin-left: 21%;
 }
