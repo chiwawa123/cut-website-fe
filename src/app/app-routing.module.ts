@@ -10,7 +10,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AlumniComponent } from './components/alumni/alumni.component';
 
 const routes: Routes = [
-
   { path:'',component:HomeComponent },
   {path:'admission',component:AdmissionsComponent},
   {path:'school',component:SchoolComponent},

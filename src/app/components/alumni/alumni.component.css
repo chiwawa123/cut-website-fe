@@ -48,7 +48,6 @@
 }
 .alumni-event-p{
   color: #fff;
-
 }
 .alumni-ben{
   color: #24b0ed;
@@ -58,12 +57,11 @@
 }
 .alumni-benefit{
   padding-top: 3rem;
-  -webkit-box-shadow: -1px 3px 5px 0px rgba(189,189,189,1);
--moz-box-shadow: -1px 3px 5px 0px rgba(189,189,189,1);
-box-shadow: -1px 3px 5px 0px rgba(189,189,189,1);
+
 }
 .alumni-p{
   text-align: justify;
+  padding-top: 10px;
 }
 .alumni-assoc{
   padding-top: 8rem;
