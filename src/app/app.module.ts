@@ -18,6 +18,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { VacanciesComponent } from './components/vacancies/vacancies.component';
 import { AlumniComponent } from './components/alumni/alumni.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
+import { VacancyHomeComponent } from './components/vacancy-home/vacancy-home.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FaqsComponent } from './components/faqs/faqs.component';
     ContactComponent,
     VacanciesComponent,
     AlumniComponent,
-    FaqsComponent
+    FaqsComponent,
+    VacancyHomeComponent
   ],
   imports: [
     BrowserModule,

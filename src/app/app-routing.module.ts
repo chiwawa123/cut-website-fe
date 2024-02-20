@@ -8,6 +8,8 @@ import { ProgramComponent } from './components/program/program.component';
 import { DirectorateComponent } from './components/directorate/directorate.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AlumniComponent } from './components/alumni/alumni.component';
+import { VacanciesComponent } from './components/vacancies/vacancies.component';
+import { VacancyHomeComponent } from './components/vacancy-home/vacancy-home.component';
 
 const routes: Routes = [
   { path:'',component:HomeComponent },
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
   {path:'program',component:ProgramComponent},
-  {path:'alumni',component:AlumniComponent}
+  {path:'alumni',component:AlumniComponent},
+  {path:'vacancies',component:VacanciesComponent},
+  {path:'vacancy-home',component:VacancyHomeComponent}
 ];
 
 @NgModule({
