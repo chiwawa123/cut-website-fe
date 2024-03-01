@@ -1,0 +1,178 @@
+.crd {
+
+  background: rgba(0, 0, 0, 0.596);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-200px);
+  display: flex;
+  max-width: 57%;
+  padding: 0px 30px;
+  margin: 0px auto;
+  height: 40%;
+
+
+}
+
+.banner {
+  height: 300px;
+  width: 100%;
+  background-color: #f0f0f0;
+  background-blend-mode: overlay;
+
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  background-blend-mode: overlay;
+}
+.search-container {
+  position: relative;
+}
+
+.search-container input[type="text"] {
+  padding-right: 40px;
+}
+
+.search-container .search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 5px 10px;
+}
+.questions-box
+{
+  background-color: #F7F6F5;
+
+}
+  .questions-content ul li {
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+  }
+
+  .questions-content ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .questions-content ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+
+  .questions-content ul li a.active::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top-color: #000;
+    border-left-color: #000;
+    background-color: transparent;
+  }
+.solutions-box{
+  text-align: center;
+  background-color: #F7F6F5;
+}
+
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+    button[aria-expanded='true'] {
+      border-bottom: 1px solid #24b0ed;
+    }
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #7288a2;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+      color: #24b0ed;
+      &::after {
+        cursor: pointer;
+        color: #24b0ed;
+        border: 1px solid #24b0ed;
+      }
+    }
+    .accordion-title {
+      padding: 1rem;
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      margin-right: 10px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
+    }
+  }
+  button[aria-expanded='true'] {
+    color: #24b0ed;
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 9em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+  }
+}

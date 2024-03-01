@@ -16,10 +16,42 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 900;
   color: #232323;
 }
+.title{
+  font-size: 2.85rem;
+  color: #fff;
 
+}
+.bottom-border{
+width: 80px;
+height: 6px;
+margin-top: 1rem;
+background: #caa350;
+
+}
 .text-gold{
   color: #C7A252;
   text-shadow: 1px 2px black;
+}
+.top-space{
+  margin-top: 90px;
+}
+.clear{
+  color: #fff;
+}
+.research-btn{
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-decoration: none;
+  padding: 7px;
+}
+
+.research-btn:hover{
+  background-color: #caa350;
+  color: #fff;
+}
+
+.bg-minor{
+  background-color: #24b0ed;
 }
 
 .navbar{
@@ -27,6 +59,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   height: 80px;
   /* box-shadow: 0 20px 16px rgba(10,10,10,.4); */
 
+}
+
+.trap-bg{
+  background-color: #F2F2F2;
 }
 
 h1, .h1 {
