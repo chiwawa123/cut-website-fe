@@ -52,6 +52,7 @@ background: #caa350;
 
 .bg-minor{
   background-color: #24b0ed;
+
 }
 
 .navbar{
@@ -1263,6 +1264,13 @@ ul.list-styled {
 .bg-2 {
   background: url("../images/bg/home-5.jpg");
   background-size: cover;
+}
+
+.bg-pattern{
+  background: url("../images/weather.png");
+
+
+
 }
 
 .slider {
