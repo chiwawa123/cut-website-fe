@@ -397,7 +397,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #CAA350;
+  color: #CAA350 !important;
   text-decoration: none;
 }
 
@@ -1095,7 +1095,7 @@ ul.list-styled {
   }
 }
 #navbar .navbar-link:hover, #navbar .navbar-link:focus {
-  color: #CAA350;
+  color: #CAA350 !important;
 }
 #navbar .btn:hover {
   color: #fff;
@@ -1245,7 +1245,7 @@ ul.list-styled {
 
 }
 .navbar-dropdown .navbar-item:hover {
-  background: #24b0ed !important;
+  background: #caa350 !important;
   color: #fff !important;
 }
 
