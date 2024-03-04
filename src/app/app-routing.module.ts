@@ -11,6 +11,7 @@ import { AlumniComponent } from './components/alumni/alumni.component';
 import { VacanciesComponent } from './components/vacancies/vacancies.component';
 import { VacancyHomeComponent } from './components/vacancy-home/vacancy-home.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
+import { JobDetailComponent } from './components/job-detail/job-detail.component';
 
 const routes: Routes = [
   { path:'',component:HomeComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'alumni',component:AlumniComponent},
   {path:'vacancies',component:VacanciesComponent},
   {path:'vacancy-home',component:VacancyHomeComponent},
-  {path:'faqs',component:FaqsComponent}
+  {path:'faqs',component:FaqsComponent},
+  {path:'job-detail',component:JobDetailComponent}
 ];
 
 @NgModule({
