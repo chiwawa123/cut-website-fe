@@ -449,13 +449,17 @@ h4{
 }
 
 h3{
-  color: #24B0ED;
+  color: #555;
   font-size: 24px;
 }
 .link-color{
   color: #24B0ED;
   text-decoration: none;
 
+}
+
+.top-h{
+  margin-top: 250px;
 }
 
 
@@ -484,7 +488,10 @@ h3{
 .schedule .single-schedule a{
 background-color: #24b0ed;
 color: #fff;
-padding: 5px;
+padding-top: 6px;
+padding-bottom: 6px;
+padding-left: 20px;
+padding-left: 20px;
 }
 
 @media (max-width: 767px) {
@@ -501,3 +508,4 @@ padding: 5px;
     order: 1 !important;
   }
 }
+
