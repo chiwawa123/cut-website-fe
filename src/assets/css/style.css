@@ -105,11 +105,11 @@ h4, .h4 {
   line-height: 30px;
 }
 h5, .h5 {
-  font-size: 18px;
+  font-size: 16px !important;
 }
 
 h6, .h6 {
-  font-size: 14px;
+  font-size: 13px !important;
 }
 
 p {
