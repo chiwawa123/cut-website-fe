@@ -65,7 +65,7 @@ background: #caa350;
 
 .research-btn:hover{
   background-color: #caa350;
-  color: #fff;
+  color: #fff !important;
 }
 
 .bg-minor{
