@@ -2722,6 +2722,7 @@ input[type="radio"]:checked + .page{
 	position: relative;
   text-decoration: none;
 }
+
 .schedule .single-schedule a:before{
 	position:absolute;
 	content:"";

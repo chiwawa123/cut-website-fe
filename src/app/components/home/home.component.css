@@ -450,8 +450,32 @@ h4{
 
 h3{
   color: #555;
-  font-size: 24px;
+  font-size: 17px;
+  border-left: 5px solid #24b0ed;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: .5em ;
+
+
 }
+h3 span{
+  font-weight: 800;
+  display: inline;
+  color: #555;
+
+}
+
+
+h3:after{
+  min-width: 35%;
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #caa350;
+}
+
+
 .link-color{
   color: #24B0ED;
   text-decoration: none;
@@ -492,6 +516,15 @@ padding-top: 6px;
 padding-bottom: 6px;
 padding-left: 20px;
 padding-left: 20px;
+}
+
+.link-hover{
+
+}
+
+.link-hover:hover{
+  color: #ffff !important;
+  background-color: #CAA350 !important;
 }
 
 @media (max-width: 767px) {
