@@ -185,8 +185,9 @@ a {
 }
 
 a:hover {
-  color: #fff;
+  color: #555 !important;
   text-decoration: none;
+
 }
 
 a:active,
