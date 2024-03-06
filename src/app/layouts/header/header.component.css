@@ -126,5 +126,7 @@ dl, ol, ul {
   .top-head{
     border: 3px solid #caa350;
   }
-
+  .navbar-link:hover {
+    border-bottom: 3px solid #caa350; /* Set the color to #caa350 */
+  }
 
