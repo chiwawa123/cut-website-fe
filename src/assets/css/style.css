@@ -795,9 +795,7 @@ ul.navbar-end {
   .slider-up{
     transform:translateX(-510px) !important;
   }
-  .bg-blue{
-    height: 40vh !important;
-  }
+
   .caption-txt{
     width: 300px !important;
     padding: 135px 10px !important;
