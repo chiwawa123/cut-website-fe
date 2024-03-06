@@ -124,9 +124,9 @@ dl, ol, ul {
     transition: transform 0.5s ease-in-out;
   }
   .top-head{
-    border: 3px solid #caa350;
+    border: 5px solid #24b0ed;
   }
   .navbar-link:hover {
-    border-bottom: 3px solid #caa350; /* Set the color to #caa350 */
+    border-bottom: 3px solid #caa350;
   }
 

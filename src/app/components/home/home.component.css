@@ -452,8 +452,6 @@ h3{
   text-transform: uppercase;
   position: relative;
   padding-bottom: .5em ;
-
-
 }
 h3 span{
   font-weight: 800;
@@ -461,7 +459,6 @@ h3 span{
   color: #555;
 
 }
-
 
 h3:after{
   /* min-width: 35%; */
@@ -472,18 +469,14 @@ h3:after{
   /* border-bottom: 2px solid #caa350; */
 }
 
-
 .link-color{
   color: #24B0ED;
   text-decoration: none;
-
 }
 
 .top-h{
   margin-top: 250px;
 }
-
-
 
 .news-single .single-main {
 
@@ -491,7 +484,6 @@ h3:after{
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
 }
-
 
 .zoomIn {
   animation-name: zoomIn;

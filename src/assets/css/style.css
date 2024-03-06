@@ -1102,7 +1102,7 @@ ul.list-styled {
 .header-top {
 
   font-size: 13px;
-  background-color: #24b0ed;
+  background-color: #caa350;
   align-items: center;
   /* background: linear-gradient(45deg, #24b0ed 74%, #fff 46%); */
 
@@ -2393,6 +2393,9 @@ h3.quote::before {
   .footer-socials {
     margin-top: 20px;
   }
+  .top-mt{
+    margin-top: 500px;
+  }
   .footer-socials li a {
     margin-left: 0px;
   }
@@ -2407,6 +2410,9 @@ h3.quote::before {
   }
   .footer-socials li a {
     margin-left: 0px;
+  }
+  .top-mt{
+    margin-top: 500px;
   }
 
   .center-style{
@@ -2423,7 +2429,7 @@ h3.quote::before {
     padding: 24px 10px !important;
   }
   .schedule .schedule-inner {
-    transform: translateY(-5%) !important;
+    transform: translateY(3%) !important;
   }
 
   .caption-txt p{
