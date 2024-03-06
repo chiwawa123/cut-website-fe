@@ -103,7 +103,7 @@ background: #caa350;
 .navbar{
   background-color: #fff;
   height: 80px;
-  /* box-shadow: 0 20px 16px rgba(10,10,10,.4); */
+  box-shadow: 0 20px 16px rgba(31, 31, 31, 0.116);
 
 }
 
@@ -1144,7 +1144,7 @@ ul.list-styled {
   padding: 3px 25px;
   background: #fff;
   line-height: 25px;
-  color: #24b0ed;
+  color: #555;
   text-decoration: none;
   animation: zoom 1s infinite;
 
