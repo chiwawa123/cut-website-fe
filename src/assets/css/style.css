@@ -21,6 +21,33 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 
 }
+/* For Webkit-based browsers */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24b0ed;
+}
+
+/* For Firefox */
+/* Note: Firefox currently does not support customizing the scrollbar color */
+/* You can skip these styles if you don't need to support Firefox */
+/*::-moz-scrollbar {
+  width: 12px;
+}
+
+::-moz-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-moz-scrollbar-thumb {
+  background: #24b0ed;
+}*/
 
 .view-more-btn {
   padding: 10px 20px;
