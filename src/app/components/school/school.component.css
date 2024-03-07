@@ -68,29 +68,31 @@
 }
 
 .cllg_mission {
-  background-color: #caa350;
-  color: white;
+  background-color: rgb(255,255,255);
+  color: #555;
   padding-left: 10%;
   padding-right: 10%;
   margin-bottom: 5%;
   height: 335px;
-  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .cllg_values {
-  background-color:  rgb(118, 200, 244);
-  color: white;
+  background-color:  rgb(255,255,255);
+  color: #555;
   padding-left: 10%;
   padding-right: 10%;
   margin-bottom: 5%;
   height: 335px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .cllg_vission {
-  background-color: rgb(118, 200, 244);
-  color: white;
+  background-color: rgb(255,255,255);
+  color: #555;
   padding-left: 10%;
   padding-right: 10%;
   margin-bottom: 5%;
   height: 335px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .btn-link{
   text-decoration: none !important;
