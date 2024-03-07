@@ -29,7 +29,7 @@
   background-blend-mode: overlay;
 }
 .landing-intro {
-  font-size: min( (1rem + 1vw), 21px);
+  font-size: 18px;
   font-weight: 400;
   margin: 1rem 0 2rem 0;
 
