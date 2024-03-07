@@ -74,6 +74,8 @@
   padding-right: 10%;
   margin-bottom: 5%;
   height: 335px;
+  padding-left: 10%;
+  border-top: 1px solid #caa350;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .cllg_values {
@@ -81,6 +83,8 @@
   color: #555;
   padding-left: 10%;
   padding-right: 10%;
+  padding-left: 10%;
+  border-top: 1px solid #caa350;
   margin-bottom: 5%;
   height: 335px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
@@ -91,6 +95,8 @@
   padding-left: 10%;
   padding-right: 10%;
   margin-bottom: 5%;
+  padding-left: 10%;
+  border-top: 1px solid #caa350;
   height: 335px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }

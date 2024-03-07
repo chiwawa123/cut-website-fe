@@ -2678,6 +2678,7 @@ input[type="radio"]:checked + .page{
 .schedule .single-schedule {
 	position: relative;
 	text-align: left;
+  border-bottom: 1px solid #24b0ed;
   height: 250px;
 	z-index:3;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
