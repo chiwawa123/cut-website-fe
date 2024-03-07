@@ -505,6 +505,15 @@ padding-bottom: 6px;
 padding-left: 20px;
 padding-left: 20px;
 }
+.schedule .single-schedule a:hover{
+  background-color: #ffff !important;
+  color: #555 !important;
+  border: 2px solid #24B0ED;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  padding-left: 20px;
+  }
 
 .underline {
   border-bottom: 2px solid #caa350; width: 150px;

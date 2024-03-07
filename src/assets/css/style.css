@@ -1149,7 +1149,10 @@ ul.list-styled {
   animation: zoom 1s infinite;
 
 
+}
 
+.header-top .top-btn:hover{
+background: #fff !important;
 }
 @keyframes zoom {
   0% {
