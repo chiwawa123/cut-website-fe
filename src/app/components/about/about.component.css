@@ -1,3 +1,18 @@
+.crd {
+
+  background: rgba(0, 0, 0, 0.596);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-200px);
+  display: flex;
+  max-width: 57%;
+  padding: 0px 30px;
+  margin: 0px auto;
+
+
+}
+
+
 .banner {
   height: 300px;
   width: 100%;
@@ -69,6 +84,7 @@ ul{
 
 
 }
+
 .white{
   color: #fff;
 
@@ -104,7 +120,7 @@ h3{
     margin: 5px;
 }
 .bl{
-  color:#24b0ed
+  color:#555
 }
 .format{
   text-align: justify;
@@ -124,7 +140,7 @@ h3{
 }
  .vertical-tabs .nav-tabs .nav-link.active{
     background-color:#24b0ed!important;
-    color:#fff;
+    color:#fff !important;
 }
 
  .vertical-tabs .tab-content>.active{
