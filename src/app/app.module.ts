@@ -21,6 +21,7 @@ import { FaqsComponent } from './components/faqs/faqs.component';
 import { VacancyHomeComponent } from './components/vacancy-home/vacancy-home.component';
 import { JobDetailComponent } from './components/job-detail/job-detail.component';
 import { OnlineDirectoryComponent } from './components/online-directory/online-directory.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { OnlineDirectoryComponent } from './components/online-directory/online-d
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent]
