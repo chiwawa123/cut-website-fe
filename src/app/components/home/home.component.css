@@ -194,6 +194,8 @@ h4{
   .carde:hover{
     transform: scale(1.05);
     box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    border-top: 1px solid #caa350;
+    border-bottom: 1px solid #caa350;
   }
   .card_title {
     position: relative;
