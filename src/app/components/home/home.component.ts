@@ -20,7 +20,7 @@ export class HomeComponent {
 	serverDetails = new ServerDetails();
 	notices!: Notice[];
 
-
+storageUrl =  this.serverDetails.serverUrlForStrorage;;
   sliderNews: Array<any> = [];
   currentSlideIndex: number = 0;
   mainNews: News | undefined;

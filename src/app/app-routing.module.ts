@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'directorate',component:DirectorateComponent},
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
-  {path:'program',component:ProgramComponent},
+  {path:'program/:id',component:ProgramComponent},
   {path:'alumni',component:AlumniComponent},
   {path:'vacancies',component:VacanciesComponent},
   {path:'vacancy-home',component:VacancyHomeComponent},

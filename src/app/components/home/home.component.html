@@ -17,7 +17,7 @@
     <div class="col-md-8 slider-up" data-wow-delay="0.2s">
       <ngb-carousel>
         <ng-template ngbSlide *ngFor="let slide of sliderNews; let index = index">
-          <img  [src]="slide.picUrl" class="slider-gesture wow zoomIn" data-wow-delay="0.1s" alt="Slide 1" />
+          <img  [src]="storageUrl+'/'+slide.picUrl" class="slider-gesture wow zoomIn" data-wow-delay="0.1s" alt="Slide 1" />
           <div class="carousel-caption"></div>
         </ng-template>
       </ngb-carousel>
