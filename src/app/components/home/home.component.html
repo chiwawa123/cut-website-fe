@@ -145,7 +145,7 @@
 		<div class="gallery-wrap">
 			<div class="main">
 				<ul class="cards">
-					<li class="cards_item wow zoomIn" data-wow-delay="0.4s" *ngFor="let item of notices | slice:0:9; let i = index">
+					<li class="cards_item wow zoomIn" data-wow-delay="0.4s" *ngFor="let item of notices | slice:0:9; let i = index"  routerLink="/notice-home/{{item.id}}">
 						<div class="carde" *ngIf="newsData">
 							<div class="card_image">
 								<span class="note">{{ item.notice_category?.name }}</span>
@@ -159,10 +159,18 @@
 							</div>
 						</div>
 					</li>
+
+          <a routerLink="/news" class="clear mt-3 research-btn d-flex justify-content-center">View More News <span><i class="fa-solid fa-arrow-right ml-1"></i></span></a>
+
 				</ul>
+
 			</div>
+
 		</div>
+
 	</div>
+
+
 </section>
 
 

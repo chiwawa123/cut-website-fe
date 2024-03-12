@@ -1,8 +1,8 @@
-export class News {
-  id:number | undefined;
-  picUrl:string | undefined;
-  date:Date | undefined;
-  title:string | undefined;
-  story:string | undefined;
+export interface News {
+  id:number;
+  picUrl:string;
+  date:Date;
+  title:string;
+  story:string;
   created_at?:Date
 }

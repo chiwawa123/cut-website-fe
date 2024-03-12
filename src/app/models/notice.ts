@@ -1,23 +1,23 @@
 import { NoticeCategory } from "./notice-category";
 import { NoticeDocument } from "./notice-document";
 
-export class Notice {
-  id: number | undefined;
-  title: string | undefined;
-  description: string | undefined;
-  created_by: number | undefined;
-  notice_category_id: number | undefined;
-  expiry_date: string | undefined;
-  approved_by: number | undefined;
-  date_approved: string | undefined;
-  deleted: number | undefined;
-  is_quick_link: number | undefined;
-  quick_link_title: string | undefined;
-  deleted_by: number | undefined;
-  deleted_at: string | undefined;
-  created_at: string | undefined;
-  updated_at: string | undefined;
-  image_url: string | undefined;
-  notice_category: NoticeCategory | undefined;
-  notice_documents: { document: NoticeDocument[]; } | undefined;
+export interface Notice {
+  id: number;
+  title: string;
+  description: string;
+  created_by: number;
+  notice_category_id: number;
+  expiry_date: string;
+  approved_by: number;
+  date_approved: string;
+  deleted: number;
+  is_quick_link: number;
+  quick_link_title: string;
+  deleted_by: number;
+  deleted_at: string;
+  created_at: string;
+  updated_at: string;
+  image_url: string;
+  notice_category: NoticeCategory;
+  notice_documents: NoticeDocument[];
 }

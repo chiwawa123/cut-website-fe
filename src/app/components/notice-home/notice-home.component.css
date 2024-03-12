@@ -1,0 +1,41 @@
+.crd {
+
+  background: rgba(0, 0, 0, 0.596);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-200px);
+  display: flex;
+  max-width: 57%;
+  padding: 0px 30px;
+  margin: 0px auto;
+
+
+}
+
+
+.banner {
+  height: 300px;
+  width: 100%;
+  background-color: #f0f0f0;
+  background-blend-mode: overlay;
+
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  background-blend-mode: overlay;
+}
+.cllg-values-ms{
+  color: #27272788;
+
+}
+
+
+.wrapp {
+  text-align: center;
+
+}

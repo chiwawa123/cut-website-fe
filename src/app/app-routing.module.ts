@@ -13,6 +13,8 @@ import { VacancyHomeComponent } from './components/vacancy-home/vacancy-home.com
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { JobDetailComponent } from './components/job-detail/job-detail.component';
 import { OnlineDirectoryComponent } from './components/online-directory/online-directory.component';
+import { NoticeHomeComponent } from './components/notice-home/notice-home.component';
+import { NewsComponent } from './components/news/news.component';
 
 const routes: Routes = [
   { path:'',component:HomeComponent },
@@ -27,7 +29,9 @@ const routes: Routes = [
   {path:'vacancies',component:VacanciesComponent},
   {path:'vacancy-home',component:VacancyHomeComponent},
   {path:'faqs',component:FaqsComponent},
-  {path:'job-detail',component:JobDetailComponent}
+  {path:'job-detail',component:JobDetailComponent},
+  {path:'notice-home/:id',component:NoticeHomeComponent},
+  { path: 'news', component: NewsComponent},
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,6 +22,8 @@ import { VacancyHomeComponent } from './components/vacancy-home/vacancy-home.com
 import { JobDetailComponent } from './components/job-detail/job-detail.component';
 import { OnlineDirectoryComponent } from './components/online-directory/online-directory.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NoticeHomeComponent } from './components/notice-home/notice-home.component';
+import { NewsComponent } from './components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -40,14 +42,17 @@ import { HttpClientModule } from '@angular/common/http';
     FaqsComponent,
     VacancyHomeComponent,
     JobDetailComponent,
-    OnlineDirectoryComponent
+    OnlineDirectoryComponent,
+    NoticeHomeComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent]
