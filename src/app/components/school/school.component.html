@@ -142,67 +142,52 @@
         <h3 class="text-center" id="dept">Departments</h3>
 
         <div class="accordion pt-3" id="accordionExample">
-          <div class="card wow fadeInLeft"  data-wow-delay="0.2s">
-            <div class="card-header " id="headingOne">
+          <div class="card wow fadeInLeft" data-wow-delay="0.2s" *ngFor="let department of school.departments; let i = index">
+            <div class="card-header" [id]="'heading' + i">
               <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                 Department of Mathematics
-                </button>
+                <a class="btn btn-link btn-block text-left" [href]="'#department_' + department.id" type="button" data-toggle="collapse" [attr.data-target]="'#collapse_' + department.id" [attr.aria-expanded]="i === 0 ? 'true' : 'false'" [attr.aria-controls]="'collapse_' + department.id">
+                  {{ department.name }}
+                </a>
               </h2>
             </div>
 
-            <div id="collapseOne" class="collapse collapsed" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div [id]="'collapse_' + department.id" class="collapse" [class.show]="i === 0" [attr.aria-labelledby]="'heading' + i" data-parent="#accordionExample">
               <div class="card-body">
-                Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+                {{ department.name }} list of Programs
               </div>
-            </div>
-          </div>
-          <div class="card wow fadeInLeft"  data-wow-delay="0.4s">
-            <div class="card-hader" id="headingTwo">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Department of Chemistry
-                </button>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
               <div class="card-body">
-                Some placeholder content for the second accordion panel. This panel is hidden by default.
-              </div>
-            </div>
-          </div>
-          <div class="card wow fadeInLeft"  data-wow-delay="0.6s">
-            <div class="card-header" id="headingThree">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Department of Physics
-                </button>
-              </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
-                And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                <table class="table table-striped table-inverse">
+                  <tbody>
+                    <tr class="py-0" *ngFor="let program of department.programs">
+                      <td class="py-0">
+                        <a class="small" [routerLink]="['/', 'programs', webUrlService.getUrl(program.id)]">
+                          {{ program.title }}
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-9 ">
+      <div class="col-md-9 " *ngFor="let item of school.contact; let i=index">
         <h3 class="text-center ">School Contacts</h3>
           <div class="flex center pt-3">
             <div class="col-md-3">
-              <h4 class="md">Dean's Office</h4>
-              <p class="sm"><i class="fa-solid fa-envelope" style="color: #24b0ed;"></i> DeanSNSMcut.ac.zw</p>
-              <p class="sm"><i class="fa-solid fa-phone" style="color: #24b0ed;"></i> +263 67 21 22203</p>
+              <h4 class="md">		{{item.name}}</h4>
+              <p class="sm"><i class="fa-solid fa-envelope" style="color: #24b0ed;"></i> {{item.email}}</p>
+              <p class="sm"><i class="fa-solid fa-phone" style="color: #24b0ed;"></i> {{item.cell}}</p>
             </div>
             <div class="col-md-3">
               <h4 class="md">School Office</h4>
-              <p class="sm"><i class="fa-solid fa-envelope" style="color: #24b0ed;"></i> DeanSNSMcut.ac.zw</p>
-              <p class="sm"> <i class="fa-solid fa-phone" style="color: #24b0ed;"></i> +263 67 21 22203</p>
+              <p class="sm"><i class="fa-solid fa-envelope" style="color: #24b0ed;"></i> {{item.tel}}</p>
+              <p class="sm"> <i class="fa-solid fa-phone" style="color: #24b0ed;"></i> {{item.fax}}</p>
             </div>
             <div class="col-md-3">
               <h4 class="md">SARs</h4>
-              <p class="sm"><i class="fa-solid fa-envelope" style="color: #24b0ed;"></i> DeanSNSMcut.ac.zw</p>
+              <p class="sm"><i class="fa-solid fa-location" style="color: #24b0ed;"></i> {{item.office_location}}</p>
               <p class="sm" ><i class="fa-solid fa-phone" style="color: #24b0ed;"></i> +263 67 21 22203</p>
             </div>
           </div>
@@ -267,96 +252,66 @@
 
 <section>
   <div class="container">
-      <!-- Team Start -->
-      <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-
-                <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" *ngFor="let staff of school.my_staff; let i = index">
+          <div class="rounded shadow overflow-hidden" *ngIf="i<4">
+            <div class="position-relative">
+              <img class="img-fluid" src="assets/images/team/team-1.jpg" alt="">
+              <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+              </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded shadow overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/images/team/team-1.jpg" alt="">
-                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded shadow overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/images/team/team-2.jpg" alt="">
-                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded shadow overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/images/team/team-3.jpg" alt="">
-                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="rounded shadow overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/images/team/team-4.jpg" alt="">
-                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center p-4 mt-3">
+              <h5 class="fw-bold mb-0">Title: {{ staff.staff_details.title }}</h5>
+              <h5 class="fw-bold mb-0">Name: {{ staff.staff_details.first_name | slice:0:1 }}. {{ staff.staff_details.last_name }}</h5>
+              <small>Position: {{ staff.staff_details.position }}</small>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="more-staff  wow fadeInUp pt-5" data-wow-delay="0.9s">
-              <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOnee" aria-expanded="true" aria-controls="collapseOne">
-                More Staff
-               </button>
-               <div class="container">
-                <div id="collapseOnee" class="collapse collapsed" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body">
-                    Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <p *ngIf="school.my_staff.length>=3" class="text-center col-12 text-center m-2">
+              <button class="btn btn-outline-primary rounded-0" type="button" data-toggle="collapse"
+                data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Show all staff
+              </button>
+            </p>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="row g-4">
+                <div class="col-lg-3 col-md-6" *ngFor="let staff of school.my_staff; let i = index">
+                  <div class="rounded shadow overflow-hidden" *ngIf="i >= 4">
+                    <div class="position-relative">
+                      <img class="img-fluid" src="assets/images/team/team-1.jpg" alt="">
+                      <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                      </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                      <h5 class="fw-bold mb-0">Title: {{ staff.staff_details.title }}</h5>
+                      <h5 class="fw-bold mb-0">Name: {{ staff.staff_details.first_name | slice:0:1 }}. {{ staff.staff_details.last_name }}</h5>
+                      <small>Position: {{ staff.staff_details.position }}</small>
+                    </div>
                   </div>
                 </div>
-               </div>
-
-
+              </div>
             </div>
-
+          </div>
         </div>
+      </div>
     </div>
     <!-- Team End -->
   </div>

@@ -101,7 +101,7 @@
 .btn-link{
   text-decoration: none !important;
   color: #24b0ed;
-  font-size: 20px;
+  font-size: 12px;
 }
 
 @keyframes zoomIn {
@@ -140,3 +140,16 @@ a{
 }
 
 
+.accordion-item{
+  border: none !important;
+}
+.btn-outline-primary
+{
+  border-color: #caa350;
+  color: #555;
+}
+.btn-outline-primary:hover
+{
+  border-color: #24b0ed;
+  color: #fff;
+}
