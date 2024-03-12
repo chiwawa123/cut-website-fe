@@ -7,6 +7,7 @@ import { NoticeServiceService } from '../../services/notice-service.service';
 import { EventsServiceService } from '../../services/events-service.service';
 import { Events } from '../../models/events';
 import { Notice } from '../../models/notice';
+import { NgbSlideEvent } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,7 @@ storageUrl =  this.serverDetails.serverUrlForStrorage;;
   sliderNews: Array<any> = [];
   currentSlideIndex: number = 0;
   mainNews: News | undefined;
-
+  currentNewsItem!:News
 
   constructor(
     private noticeService: NoticeServiceService,
@@ -76,4 +77,11 @@ storageUrl =  this.serverDetails.serverUrlForStrorage;;
     }
     var win = window.open(url, '_blank');
   }
+  slideEvent(event: NgbSlideEvent) {
+    console.log(event);
+    const currentIndex =Number(event.current.split("-")[2])
+    console.log(currentIndex);
+    this.currentNewsItem = this.sliderNews[currentIndex]
+  }
+
 }
