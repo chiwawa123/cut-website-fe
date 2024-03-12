@@ -106,96 +106,114 @@
 
 		<div class="columns is-gapless is-multiline">
 
-<div class="tab-vertical">
-    <div class="container">
-		<div class="columns is-justify-content-center">
-			<div class="column is-8-desktop is-10-tablet">
-				<div class="section-title has-text-centered">
-					<h1 style="margin-bottom: 30px; font-weight: 900;color: #777676;"><i class="fa-solid fa-graduation-cap fa-lg" style="color: #24b0ed;"></i> Our Programs</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-    <ul class="nav nav-tabs" id="myTab3" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" id="home-vertical-tab" data-toggle="tab" href="#home-vertical" role="tab" aria-controls="home" aria-selected="true">School of Institute Science, material science and technology</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="profile-vertical-tab" data-toggle="tab" href="#profile-vertical" role="tab" aria-controls="profile" aria-selected="false">School of Art and Design</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="contact-vertical-tab" data-toggle="tab" href="#contact-vertical" role="tab" aria-controls="contact" aria-selected="false">School of Hospitality and Tourism</a>
-            <li class="nav-item">
-                <a class="nav-link" id="profile-vertical-tab" data-toggle="tab" href="#profile-vertical" role="tab" aria-controls="profile" aria-selected="false">School of Engineering Science and Technology</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="contact-vertical-tab" data-toggle="tab" href="#contact-vertical" role="tab" aria-controls="contact" aria-selected="false">School of Wildlife and Natural Sciences</a>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-vertical-tab" data-toggle="tab" href="#profile-vertical" role="tab" aria-controls="profile" aria-selected="false">Graduate Business School</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="contact-vertical-tab" data-toggle="tab" href="#contact-vertical" role="tab" aria-controls="contact" aria-selected="false">School of Business and Entreprenuership</a>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-vertical-tab" data-toggle="tab" href="#profile-vertical" role="tab" aria-controls="profile" aria-selected="false">School of Agriculturural Sciences and Technology</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="contact-vertical-tab" data-toggle="tab" href="#contact-vertical" role="tab" aria-controls="contact" aria-selected="false">School of Healthy Sciences and Technology</a>
-                        <li class="nav-item">
-                            <a class="nav-link" id="profile-vertical-tab" data-toggle="tab" href="#profile-vertical" role="tab" aria-controls="profile" aria-selected="false">School of Art and Design</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="contact-vertical-tab" data-toggle="tab" href="#contact-vertical" role="tab" aria-controls="contact" aria-selected="false">School of Hospitality and Tourism</a>
-        </li>
-    </ul>
+      <section id="programs">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12  py-2 my-4">
+              <h3 class="text-center text-black" data-aos="flip-right">
+                <i class="fas fa-graduation-cap fa-1x  "></i> Our Programs
+              </h3>
+            </div>
 
-    <div class="tab-content" id="myTabContent3">
-
-
-        <div class="tab-pane fade show active flex-display-content" id="home-vertical" role="tabpanel" aria-labelledby="home-vertical-tab">
-            <div class="col-md-4 mr-5 ml-5">
-            <div class="quote">
-                <span class="left">❝</span>
-                <blockquote class="lead small-font"><span style="font-size: 20px; font-weight: 600;">Dean's Welcome Message</span> <br><hr>
-                    The School of Art and Design focuses its energies toward the development of the creative arts and design. Its establishment was a direct response to manpower development needs in our manufacturing industries and other economic sectors such as the media industry. The School of Art and Design seeks to create opportun..
-
-                </blockquote>
-                <small>Prof John Chibadura</small>
-
-                <!-- <span class="right">❞</span> -->
+            <div class="col-sm-12 col-md-12 row">
+              <!-- <h6 class="text-center"> <i class="fas fa-calendar-alt   fa-fw"></i> </h6> -->
+              <div class="nav col-md-4 col-lg-3  nav-pills d-none d-md-block" role="tablist"
+                aria-orientation="vertical" style="max-height: 60vh; overflow: scroll; overflow-x: hidden;"
+                data-aos="fade-right">
+                <button href="#" *ngFor="let item of schools; let i=index" (click)="selected(i)"
+                  class="nav-link small btn btn-link btn-small text-left btn-lg-block "
+                  [ngClass]="{'active': indexSelected==i}" id="v-pills-home-tab" data-toggle="pill" role="tab"
+                  aria-controls="v-pills-home" aria-selected="true">
+                  {{item.name}}
+                </button>
               </div>
 
+              <div class="col-md-8 col-lg-9 col-sm-12" *ngIf="selectedSchool">
+                <div class="tab-pane fade show " id="v-pills-home" role="tabpanel"
+                  aria-labelledby="v-pills-home-tab">
+                  <div class="row">
+                    <div class="col-12 border-bottom border-primary">
+                      <h5 class="text-center text-black mx-3" *ngIf="schools">
+                        {{schools[indexSelected].name}}
+                      </h5>
+
+                    </div>
+                    <div class="col-sm-12 col-md-4 " data-aos="fade-right">
+                      <!-- <h5 class="">
+                        About
+                      </h5> -->
+
+                      <p class="small text-justify" *ngIf="selectedSchool.description"
+                        [innerHTML]="(selectedSchool.description.about | slice:0:350)+ '...'">
+
+                      </p>
+                      <h6 class="small">
+                        Departments
+                      </h6>
+                      <ul class="small" *ngIf="selectedSchool">
+                        <li *ngFor="let item of selectedSchool.departments; let i=index">{{item.name}}</li>
+                      </ul>
+                      <p class="small">
+                        <a [routerLink]="['/','school',getUrl(selectedSchool.id)]">
+                          read more info...
+                          <i class="fas fa-arrow-circle-right fa-sm fa-fw"></i>
+                        </a>
+
+                      </p>
+                    </div>
+                    <div class="col-sm-12 col-md-8  " data-aos-offset="-400" data-aos="fade-up"
+                      data-aos-duration="1000" data-aos-anchor-placement="bottom-center">
+
+                      <div class="border-bottom-0 row">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                          <h6>Programs</h6>
+                          <ul class="small  ">
+                            <li class="text-primary cursor-pointer"
+                              *ngFor="let item of selectedPrograms; let i=index"
+                              [routerLink]="['/','programs',getUrl(item.id)]">{{item.title}}</li>
+                          </ul>
+
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 ">
+                          <h6>School Events</h6>
+                          <div *ngIf="selectedSchool">
+                            <div *ngFor="let item of selectedSchool.events; let i=index"
+                              class="d-flex flex-row my-1  shadow rounded-0  cursor-pointer ">
+                              <div class="col-sm-4 px-0">
+                                <div [ngClass]="{'bg-success': 0==i,'bg-warning': 1==i}"
+                                  class="w-100 h-100 d-flex justify-content-center align-items-center text-center rounded-0 date mr-1">
+                                  <div>
+
+                                    <h6>{{item.date_of_event | date:'dd'}}</h6>
+                                    <h6>{{item.date_of_event | date:'MMM'}}</h6>
+                                    <h6>{{item.date_of_event | date:'yyyy'}}</h6>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <h6 class="px-1">{{item.title}}</h6>
+                                <p class="small px-1" [innerHTML]="item.description | slice:0:100">
+
+                                </p>
+                              </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <app-appy-now-lg></app-appy-now-lg> -->
+            </div>
+          </div>
+          <div class="row order-bottom py-1">
+          </div>
         </div>
-        <div class="col-md-4 mr-5">
-            <p class="lead small-font"><span style="font-size: 20px; font-weight: 600;">Programmes</span> <br><hr></p>
-
-            <ul class="program-item">
-            <li><a class="link-sm" href="#">Bachelor of Science (Hons) Degree in Entrepreneurship and Business management</a></li>
-            <li><a class="link-sm" href="#">Bachelor of Science Honours Degree in Supply Chain Management</a></li>
-            <li><a class="link-sm" href="#">Bachelor of Science Honours Degree in Accountancy</a></li>
-            <li><a class="link-sm" href="#">Bachelor of Science Honours in Defence Logistics</a></li>
-            <li><a class="link-sm" href="#">Master of Science in Supply Chain Management</a></li>
-            </ul>
-
-        </div>
-        <div class="col-md-4 mr-5">
-            <p class="lead small-font"><span style="font-size: 20px; font-weight: 600;">Programmes</span> <br><hr></p>
-
-            <ul class="program-item">
-            <li><a class="link-sm" href="#">Bachelor of Science (Hons) Degree in Entrepreneurship and Business management</a></li>
-            <li><a class="link-sm" href="#">Bachelor of Science Honours Degree in Supply Chain Management</a></li>
-            <li><a class="link-sm" href="#">Bachelor of Science Honours Degree in Accountancy</a></li>
-            <li><a class="link-sm" href="#">Bachelor of Science Honours in Defence Logistics</a></li>
-            <li><a class="link-sm" href="#">Master of Science in Supply Chain Management</a></li>
-            </ul>
-
-        </div>
-       </div>
-
-
-
-
-    </div>
-</div>
+      </section>
 
 
 

@@ -109,11 +109,8 @@
               arrow_drop_down
               </span></a>
 						<div class="navbar-dropdown">
-							<a class="navbar-item" routerLink="school" >School of Natural Sciences & Mathematics</a>
-							<a class="navbar-item" href="event-single.html">School of Art & Design</a>
-							<a class="navbar-item" href="confirmation.html">School of Engineering Science &
-								Technology</a>
-							<a class="navbar-item" href="404.html">Graduate Business School</a>
+              <a [routerLink]="['school',school.url]" *ngFor="let school of schools" class="navbar-item"> {{school.name}} </a>
+
 						</div>
 					</li>
 
@@ -122,9 +119,8 @@
               arrow_drop_down
               </span></a>
 						<div class="navbar-dropdown align-right">
-							<a class="navbar-item" routerLink="directorate">Research and Graduate Studies</a>
-							<a class="navbar-item" href="blog-sidebar.html">Quality Assurance</a>
-							<a class="navbar-item" href="blog-single.html">Academy of Teaching & Learning</a>
+
+              <a *ngFor="let directorate of directorates" class="navbar-item" type="button" [routerLink]="directoryUrl(directorate)"> {{directorate.name}} </a>
 						</div>
 					</li>
 

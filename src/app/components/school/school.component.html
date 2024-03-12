@@ -5,7 +5,7 @@
         <div class="crd mx-auto">
           <div class="col-md-12 col-sm-12">
               <div class="wrapp">
-                  <h2 class="pt-1 white">School of Natural Sciences and Mathematics</h2>
+                  <h2 class="pt-1 white">{{school.name}}</h2>
 
 
               </div>
@@ -51,8 +51,14 @@
     <div class="container">
       <div class="col-md-12 flex">
         <div class="col-md-8 pt-5 mr-3">
-          <h2 ><span style="border-left: 5px solid #24b0ed; margin-right: 10px; "></span>Dean's Welcome message</h2>
-          <p class="format pt-2">Welcome to the School of Natural Sciences and Mathematics where science and mathematics champions are trained. The School is designed to advance the boundaries of science for the wider benefit of society by pursuing high impact life changing research, innovation, teaching and enterprise. The teaching and research by the School addresses global challenges such as those in energy, climate, environment, food, water and health through harnessing the strengths of our students and staff; and the wider synergies. The School is anchored on the diverse fields of biology, chemistry, physics and mathematics. To attain its vision, the School remains committed to sustaining an inspiring and compelling innovation ecosystem in its teaching, research and enterprise for professional and personal success of our graduates. </p>
+          <!-- <h2 ><span style="border-left: 5px solid #24b0ed; margin-right: 10px; "></span>Dean's Welcome message</h2> -->
+
+
+								<p class="format pt-2" [innerHTML]=" school.description.about">
+
+								</p>
+
+
           <div class="col-md-12">
             <div class="overview">
               <div class="more-staff  wow fadeInUp pt-5" data-wow-delay="0.9s">
@@ -66,7 +72,9 @@
 
                         During third year of industrial attachment, our students are exposed to the work related learning environment. While on attachment students must identify a discipline specific problem faced by the organisation and they conduct research to solve the challenge. The traditional module based practical sessions have been reconfigured to immerse undergraduates in real research experiences with community. Our students also carry out independent researches, at 4th year that are critical to further develop academic independence, inquiry and communication skills. SNSM prides itself in highly qualified academics with expertise in exciting areas of science tasked to delivering research informed education and practical skills to our students. The School curriculum inspires its students for wealth creation through the blending of discipline specific modules with a range of enriching modules that cover entrepreneurship skills, marketing, quality assurance, and new product development. To enrich the learning ecosystem, our curricula is supported by well-established state-of-the-art facilities which include laboratories and a factory vital to stimulate critical thinking and innovation by both our academics and students. The School partners with other universities, funding agencies and industry to pursue science for society under its thematic areas of Health, Energy, Food Security, Water, Material Sciences, Environmental Sustainability and Science Education.</p>
 
-                    </div>
+
+
+                      </div>
                   </div>
                  </div>
 
@@ -77,8 +85,17 @@
           </div>
         </div>
         <div class="col-md-4 ml-3 pt-5">
-          <img src="assets/images/bg/huncho.png">
-          <h4 class="text-center pt-2">Dean : Quavo Hunchoe</h4>
+          <img *ngIf="dean" [title]="dean.staff_details.title+ ' '+dean.staff_details.initials +' '+dean.staff_details.last_name+ ': Dean' "
+          class="img-thumbnail img-fluid dean" data-descr="dean.staff_details.title+ ' '+dean.staff_details.initials +' '+dean.staff_details.last_name+ ': Dean' "
+          [src]="this.serverDetails.serverUrlForStrorage +'/'+dean.staff_details.picUrl" />
+          <img *ngIf="!dean"
+          class="img-thumbnail img-fluid dean"
+          src="assets/img/avata.jpeg" />
+
+
+          <h4 *ngIf="dean" class="text-center pt-2">  {{dean.staff_details.position}}    {{dean.staff_details.title +' '+ dean.staff_details.initials}} . {{dean.staff_details.last_name}}</h4>
+
+
 
         </div>
 
@@ -92,31 +109,23 @@
 
       <div class="row flex pt-4">
         <div class="col-md-4">
-          <div class="cllg_vission wow fadeInUp"  data-wow-delay="0.3s">
+          <div class="cllg_vission wow fadeInUp"  data-wow-delay="0.3s" *ngIf="school.description.vision">
             <h5 class="text-center pt-5">Vision</h5>
-            <p class="format text-center">To be a premier School of Natural Sciences and Mathematics excelling in life changing research and innovation which benefits society.</p>
+            <p class="format text-center" 	[innerHTML]="school.description.vision"></p>
 
           </div>
         </div>
         <div class="col-md-4">
-          <div class="cllg_mission wow fadeInUp"  data-wow-delay="0.5s">
+          <div class="cllg_mission wow fadeInUp"  data-wow-delay="0.5s" *ngIf="school.description.mission">
             <h5 class="text-center pt-5">Mission</h5>
-            <p class="format text-center">To advance knowledge through research informed teaching and learning, sustain a thriving ecosystem of life changing research and innovation, contribute to solving societal problems and in turn produce innovative graduates who create wealth.</p>
+            <p class="format text-center" [innerHTML]="school.description.mission"></p>
 
           </div>
         </div>
         <div class="col-md-4">
-          <div class="cllg_values wow fadeInUp"  data-wow-delay="0.7s">
+          <div class="cllg_values wow fadeInUp"  data-wow-delay="0.7s"  *ngIf="school.description.values">
             <h5 class="text-center pt-5">Values</h5>
-            <p class="format text-center">Dynamism
-
-              Diversity
-
-              Creativity
-
-              Integrity
-
-              Enterprise</p>
+            <p class="format text-center" [innerHTML]="school.description.values" ></p>
 
           </div>
         </div>
