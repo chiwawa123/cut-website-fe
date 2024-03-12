@@ -3,6 +3,10 @@ import { News } from '../../models/news';
 import { ServerDetails } from '../../models/server-details';
 import { NewsServiceService } from '../../services/news-service.service';
 import { DataMonitorServiceService } from '../../services/data-monitor-service.service';
+import { NoticeServiceService } from '../../services/notice-service.service';
+import { EventsServiceService } from '../../services/events-service.service';
+import { Events } from '../../models/events';
+import { Notice } from '../../models/notice';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +14,21 @@ import { DataMonitorServiceService } from '../../services/data-monitor-service.s
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+	newsData!: Array<any>;
+	eventsData: Array<Events> | undefined;
+	serverDetails = new ServerDetails();
+	notices!: Notice[];
+
+
   sliderNews: Array<any> = [];
   currentSlideIndex: number = 0;
   mainNews: News | undefined;
-  serverDetails = new ServerDetails();
-parseInt: any;
-carousel: any;
+
 
   constructor(
+    private noticeService: NoticeServiceService,
+		private eventsService: EventsServiceService,
     private newsService: NewsServiceService,
     private dataMonitor: DataMonitorServiceService
   ) {
@@ -31,6 +42,21 @@ carousel: any;
       console.log('Main News:', data); // Debugging statement
       this.mainNews = data;
     });
+
+    this.newsService.getAllNews().subscribe((data: Array<any>) => {
+			this.newsData = data;
+			this.dataMonitor.changeStatus();
+		});
+    this.eventsService.getFrontPageEvents().subscribe((data: Array<Events>) => {
+			this.eventsData = data;
+			this.dataMonitor.changeStatus();
+		});
+
+		this.noticeService.getAll().subscribe(notices => {
+			this.notices = notices;
+			const len = notices.length > 8 ? 0 : (7 - notices.length);
+			this.newsData = this.newsData.slice(0, len);
+		});
   }
 
   ngOnInit(): void {}
