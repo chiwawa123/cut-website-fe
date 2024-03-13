@@ -1,13 +1,10 @@
 <section class="section pt-0">
         <div class="col-md-12 banner">
-        <img class="banner-img" src="assets/images/bg/sc1.png">
-
+        <img  class="banner-img" [src]="storageUrl+'/'+school.school_img" alt="" />
         <div class="crd mx-auto">
           <div class="col-md-12 col-sm-12">
               <div class="wrapp">
                   <h2 class="pt-1 white">{{school.name}}</h2>
-
-
               </div>
           </div>
       </div>
@@ -59,7 +56,7 @@
 								</p>
 
 
-          <div class="col-md-12">
+          <!-- <div class="col-md-12">
             <div class="overview">
               <div class="more-staff  wow fadeInUp pt-5" data-wow-delay="0.9s">
                 <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOnee" aria-expanded="true" aria-controls="collapseOne">
@@ -82,8 +79,9 @@
               </div>
 
              </div>
-          </div>
+          </div> -->
         </div>
+
         <div class="col-md-4 ml-3 pt-5">
           <img *ngIf="dean" [title]="dean.staff_details.title+ ' '+dean.staff_details.initials +' '+dean.staff_details.last_name+ ': Dean' "
           class="img-thumbnail img-fluid dean" data-descr="dean.staff_details.title+ ' '+dean.staff_details.initials +' '+dean.staff_details.last_name+ ': Dean' "
@@ -141,11 +139,11 @@
       <div class="col-md-3">
         <h3 class="text-center" id="dept">Departments</h3>
 
-        <div class="accordion pt-3" id="accordionExample">
+        <div class="accordion pt-3" id="accordionExample" >
           <div class="card wow fadeInLeft" data-wow-delay="0.2s" *ngFor="let department of school.departments; let i = index">
-            <div class="card-header" [id]="'heading' + i">
+            <div class="card-header" [id]="'heading' + i" >
               <h2 class="mb-0">
-                <a class="btn btn-link btn-block text-left" [href]="'#department_' + department.id" type="button" data-toggle="collapse" [attr.data-target]="'#collapse_' + department.id" [attr.aria-expanded]="i === 0 ? 'true' : 'false'" [attr.aria-controls]="'collapse_' + department.id">
+                <a class="btn btn-link btn-block text-left" [href]="'#department_' + department.id" onclick="document.getElementById('dept').scrollIntoView(); return false;" type="button" data-toggle="collapse" [attr.data-target]="'#collapse_' + department.id" [attr.aria-expanded]="i === 0 ? 'true' : 'false'" [attr.aria-controls]="'collapse_' + department.id">
                   {{ department.name }}
                 </a>
               </h2>
@@ -153,14 +151,14 @@
 
             <div [id]="'collapse_' + department.id" class="collapse" [class.show]="i === 0" [attr.aria-labelledby]="'heading' + i" data-parent="#accordionExample">
               <div class="card-body">
-                {{ department.name }} list of Programs
+                List of Programs
               </div>
               <div class="card-body">
                 <table class="table table-striped table-inverse">
                   <tbody>
                     <tr class="py-0" *ngFor="let program of department.programs">
                       <td class="py-0">
-                        <a class="small" [routerLink]="['/', 'programs', webUrlService.getUrl(program.id)]">
+                        <a class="small text-success" style="font-size: 13px;" [routerLink]="['/', 'programs', webUrlService.getUrl(program.id)]">
                           {{ program.title }}
                         </a>
                       </td>
@@ -172,28 +170,47 @@
           </div>
         </div>
       </div>
-      <div class="col-md-9 " *ngFor="let item of school.contact; let i=index">
-        <h3 class="text-center ">School Contacts</h3>
-          <div class="flex center pt-3">
-            <div class="col-md-3">
-              <h4 class="md">		{{item.name}}</h4>
-              <p class="sm"><i class="fa-solid fa-envelope" style="color: #24b0ed;"></i> {{item.email}}</p>
-              <p class="sm"><i class="fa-solid fa-phone" style="color: #24b0ed;"></i> {{item.cell}}</p>
-            </div>
-            <div class="col-md-3">
-              <h4 class="md">School Office</h4>
-              <p class="sm"><i class="fa-solid fa-envelope" style="color: #24b0ed;"></i> {{item.tel}}</p>
-              <p class="sm"> <i class="fa-solid fa-phone" style="color: #24b0ed;"></i> {{item.fax}}</p>
-            </div>
-            <div class="col-md-3">
-              <h4 class="md">SARs</h4>
-              <p class="sm"><i class="fa-solid fa-location" style="color: #24b0ed;"></i> {{item.office_location}}</p>
-              <p class="sm" ><i class="fa-solid fa-phone" style="color: #24b0ed;"></i> +263 67 21 22203</p>
-            </div>
-          </div>
+      <div class="col-md-9" id="contact_us">
+        <h3 class=" date text-center">Contact Us </h3>
+        <div class="card border text-muted p-2" style="outline: none;">
+          <h6 class="text-center pt-3">
+            <strong> {{school.name}}</strong>
+          </h6>
+          <address class="small row pt-3 text-center" *ngIf=" school.contact">
+            <div class="col-sm-4 class-md-4" *ngFor="let item of school.contact; let i=index">
+              <span *ngIf="item.name">
+                {{item.name}}
+              </span>
+              <br>
+              <i class="fas fa-envelope " *ngIf="item.email"></i>
+              <span *ngIf="item.email">
+                {{item.email}}
+              </span>
+              <br *ngIf="item.email">
+              <i class="fas fa-phone-square " *ngIf="item.cell"></i>
+              <span *ngIf="item.cell">
+                {{item.cell}}
+              </span>
 
+              <br *ngIf="item.cell">
+              <i class="fas fa-tty " *ngIf="item.tel"></i>
+              <span *ngIf="item.tel">
+                {{item.tel}}
+              </span>
 
-
+              <br *ngIf="item.tel">
+              <i class="fas fa-fax " *ngIf="item.fax"></i>
+              <span *ngIf="item.fax">
+                {{item.fax}}
+              </span>
+              <br *ngIf="item.fax">
+              <i class="fas fa-map-marked-alt" *ngIf="item.office_location"></i>
+              <span *ngIf="item.office_location">
+                {{item.office_location}}
+              </span>
+            </div>
+          </address>
+        </div>
       </div>
     </div>
   </div>
@@ -255,23 +272,70 @@
     <!-- Team Start -->
     <div class="container-xxl py-5">
       <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+        <h3 class="mb-5"> Our <span class="">Staff</span></h3>
       </div>
+
+
+      <!-- Button trigger modal -->
+
+
+
+
       <div class="row g-4">
         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" *ngFor="let staff of school.my_staff; let i = index">
-          <div class="rounded shadow overflow-hidden" *ngIf="i<4">
-            <div class="position-relative">
-              <img class="img-fluid" src="assets/images/team/team-1.jpg" alt="">
-              <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+          <div class="overflow-hidden" *ngIf="i<4">
+            <div class="staff-card">
+              <div class="card-image">
+                <img [src]="storageUrl+'/'+staff.staff_details.picUrl" alt="" />
               </div>
+              <div class="card-content">
+                <h5 class="fw-bold mb-0">Title: {{ staff.staff_details.title }}</h5>
+                <h5 class="fw-bold mb-0">Name: {{ staff.staff_details.first_name | slice:0:1 }}. {{ staff.staff_details.last_name }}</h5>
+                <small>Position: {{ staff.staff_details.position }}</small>
+              </div>
+              <div class="social-icons">
+                <a href="#" target="_blank">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+
+              <p type="button" class="text-center blue" data-toggle="modal" [attr.data-target]="'#exampleModal'+i"><i class="fa-solid fa-eye"></i>
+              view More
+              </p>
             </div>
-            <div class="text-center p-4 mt-3">
-              <h5 class="fw-bold mb-0">Title: {{ staff.staff_details.title }}</h5>
-              <h5 class="fw-bold mb-0">Name: {{ staff.staff_details.first_name | slice:0:1 }}. {{ staff.staff_details.last_name }}</h5>
-              <small>Position: {{ staff.staff_details.position }}</small>
+
+          </div>
+
+                    <!-- Modal -->
+          <div class="modal fade" id="exampleModal{{i}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Staff Profile</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" >
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card-image">
+                        <img [src]="storageUrl+'/'+staff.staff_details.picUrl" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <p [innerHTML]="staff.about"></p>
+                    </div>
+                  </div>
+                </div>
+            
+              </div>
             </div>
           </div>
         </div>
@@ -290,24 +354,38 @@
           <div id="collapseOne" class="accordion-collapse collapse" data-parent="#accordionExample">
             <div class="accordion-body">
               <div class="row g-4">
-                <div class="col-lg-3 col-md-6" *ngFor="let staff of school.my_staff; let i = index">
-                  <div class="rounded shadow overflow-hidden" *ngIf="i >= 4">
-                    <div class="position-relative">
-                      <img class="img-fluid" src="assets/images/team/team-1.jpg" alt="">
-                      <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" *ngFor="let staff of school.my_staff; let i = index">
+                  <div class="overflow-hidden" *ngIf="i >= 4">
+                    <div class="staff-card">
+                      <div class="card-image">
+                        <img [src]="storageUrl+'/'+staff.staff_details.picUrl" alt="" />
                       </div>
+                      <div class="card-content">
+                        <h5 class="fw-bold mb-0">Title: {{ staff.staff_details.title }}</h5>
+                        <h5 class="fw-bold mb-0">Name: {{ staff.staff_details.first_name | slice:0:1 }}. {{ staff.staff_details.last_name }}</h5>
+                        <small>Position: {{ staff.staff_details.position }}</small>
+                      </div>
+                      <div class="social-icons">
+                        <a href="#" target="_blank">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                          <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                      </div>
+
+                      <p type="button" class="text-center blue " data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-eye"></i>
+                      view More
+                      </p>
                     </div>
-                    <div class="text-center p-4 mt-3">
-                      <h5 class="fw-bold mb-0">Title: {{ staff.staff_details.title }}</h5>
-                      <h5 class="fw-bold mb-0">Name: {{ staff.staff_details.first_name | slice:0:1 }}. {{ staff.staff_details.last_name }}</h5>
-                      <small>Position: {{ staff.staff_details.position }}</small>
-                    </div>
+
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

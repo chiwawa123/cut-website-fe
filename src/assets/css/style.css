@@ -463,26 +463,6 @@ a:focus {
   padding: 70px 0;
 }
 
-.carousel-item {
-  position: relative;
-  display: none;
-  float: left;
-  width: 100%;
-  margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition-property: transform;
-  transition-duration: 0.6s, 0.4s;
-
-  animation: animatedBackground 30s linear infinite alternate;
-}
-
-.carousel-item:hover {
-  transform: scale(1.05);
-
-  transition-duration: 0.3s;
-}
-
 a {
   transition: all 0.4s ease 0s;
 }

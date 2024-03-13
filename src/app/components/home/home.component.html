@@ -1,12 +1,12 @@
 <!-- Slider Start -->
 <section>
-  <div class="flex-disp" >
+  <div class="flex-disp">
     <div class="col-md-10 bg-blue">
       <div class="caption-txt">
-        <h2 class="light lg wow fadeInLeft" data-wow-delay="0.1s">
+        <h1 class="light lg wow fadeInLeft big-font" data-wow-delay="0.1s">
           <span [innerHTML]="currentNewsItem?.title| slice: 0:80"></span>...
-        </h2>
-        <p class="light format" data-wow-delay="0.3s" [innerHTML]="currentNewsItem?.story">
+        </h1>
+        <p class="light format" data-wow-delay="0.3s">
           <!-- {{}} -->
           <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia odio aspernatur sapiente quas veniam. Asperiores deleniti inventore voluptates impedit modi voluptate libero sunt expedita iste porro, doloribus soluta illum nobis. -->
         </p>
@@ -15,17 +15,16 @@
         </a>
       </div>
     </div>
-    <div class="col-md-8 slider-up" data-wow-delay="0.2s">
-      <ngb-carousel (slide)="slideEvent($event)">
-        <ng-template ngbSlide *ngFor="let slide of sliderNews; let index = index"   >
-          <img  [src]="storageUrl+'/'+slide.picUrl" class="slider-gesture wow zoomIn" data-wow-delay="0.1s" alt="Slide 1" />
+    <div class="col-md-8 slider-up">
+      <ngb-carousel (slide)="slideEvent($event)" class="carousel-container">
+        <ng-template ngbSlide *ngFor="let slide of sliderNews; let index = index">
+          <img [src]="storageUrl+'/'+slide.picUrl" class="slider-gesture" alt="Slide 1" />
           <div class="carousel-caption"></div>
         </ng-template>
       </ngb-carousel>
     </div>
   </div>
 </section>
-
 <section >
   <div class="container">
     <div class="schedule">
@@ -146,7 +145,7 @@
 		<div class="gallery-wrap">
 			<div class="main">
 				<ul class="cards">
-					<li class="cards_item wow zoomIn" data-wow-delay="0.4s" *ngFor="let item of notices | slice:0:9; let i = index"  routerLink="/notice-home/{{item.id}}">
+					<li class="cards_item wow zoomIn" data-wow-delay="0.4s" *ngFor="let item of notices | slice:0:6; let i = index"  routerLink="/notice-home/{{item.id}}">
 						<div class="carde" *ngIf="newsData">
 							<div class="card_image">
 								<span class="note">{{ item.notice_category?.name }}</span>

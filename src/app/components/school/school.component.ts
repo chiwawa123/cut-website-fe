@@ -3,6 +3,7 @@ import { ServerDetails } from '../../models/server-details';
 import { SchoolServiceService } from '../../services/school-service.service';
 import { ActivatedRoute } from '@angular/router';
 import { WebUrlServiceService } from '../../services/web-url-service.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-school',
@@ -10,10 +11,14 @@ import { WebUrlServiceService } from '../../services/web-url-service.service';
   styleUrl: './school.component.css'
 })
 export class SchoolComponent {
+  selectedStaff: any;
+
+
   title:string =""
   school: any;
   dean:any;
   serverDetails = new ServerDetails();
+  storageUrl =  this.serverDetails.serverUrlForStrorage;
   myUrl: any;
 
   constructor(
@@ -21,6 +26,7 @@ export class SchoolComponent {
     private schoolService:SchoolServiceService,
     private route:ActivatedRoute,
     public webUrlService:WebUrlServiceService,
+    private viewportScroller: ViewportScroller
   ) {
       this.route.paramMap.subscribe(info => {
         this.myUrl = info.get('id');
@@ -55,5 +61,16 @@ export class SchoolComponent {
   getBackgroundImage(url:string){
 
     return `url(${this.serverDetails.serverUrlForStrorage}/${url}) no-repeat center center/cover`;// "url("+this.serverDetails.serverUrlForStrorage+'/'+news.picUrl+") no-repeat  center center/cover";
+  }
+
+  scrollTo(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  openModal(staff: any) {
+    this.selectedStaff = staff;
   }
 }

@@ -25,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NoticeHomeComponent } from './components/notice-home/notice-home.component';
 import { NewsComponent } from './components/news/news.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +54,7 @@ import { NewsComponent } from './components/news/news.component';
     NgbModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent]
