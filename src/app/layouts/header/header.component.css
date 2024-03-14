@@ -123,3 +123,9 @@ dl, ol, ul {
     border-bottom: 3px solid #caa350;
   }
 
+  svg {
+    width: 1rem;
+    height: 1rem;
+    fill: none;
+    stroke: #555;
+  }
