@@ -104,13 +104,14 @@
 						</div>
 					</li>
 
-					<li class="navbar-item has-dropdown is-hoverable">
+
+          <li class="navbar-item has-dropdown is-hoverable">
 						<a class="navbar-link">Schools<span class="material-symbols-outlined gold">
               arrow_drop_down
               </span></a>
-						<div class="navbar-dropdown">
-              <a [routerLink]="['school',school.url]" *ngFor="let school of schools" class="navbar-item"> {{school.name}} </a>
+						<div class="navbar-dropdown align-right">
 
+              <a [routerLink]="['school',school.url]" *ngFor="let school of schools" class="navbar-item"> {{school.name}} </a>
 						</div>
 					</li>
 

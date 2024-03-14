@@ -1219,7 +1219,7 @@ background: #fff !important;
 }
 .navbar-dropdown.align-right {
   left: auto;
-  right: -34px;
+  right: -4px;
 }
 @media (max-width: 1023px) {
   .navbar-dropdown {
