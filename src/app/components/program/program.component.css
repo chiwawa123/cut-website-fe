@@ -1,3 +1,19 @@
+.crd {
+
+  background: rgba(0, 0, 0, 0.596);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-200px);
+  display: flex;
+  max-width: 57%;
+  padding: 0px 30px;
+  margin: 0px auto;
+
+
+}
+
+
+
 .banner {
   height: 300px;
   width: 100%;
@@ -22,6 +38,8 @@ padding: 4px;
 text-align: center;
 margin: 20px auto;
 width: 50%;
+border-radius: 0px;
+border: none;
 
 }
 
@@ -202,3 +220,4 @@ input:checked ~ .accordion-content {
   border: 1px solid #24b0ed;
  padding: 10px;
 }
+

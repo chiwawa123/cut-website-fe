@@ -46,7 +46,7 @@ import { NewsComponent } from './components/news/news.component';
     JobDetailComponent,
     OnlineDirectoryComponent,
     NoticeHomeComponent,
-    NewsComponent
+    NewsComponent,
   ],
   imports: [
     BrowserModule,

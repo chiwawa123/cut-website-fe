@@ -1,28 +1,25 @@
-import { Component, AfterViewInit, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, QueryList, ViewChildren, OnInit } from '@angular/core';
+import { FaqCategorySolution } from '../../models/faq-category-solution';
+import { FaqsServiceService } from '../../services/faqs-service.service';
 
 @Component({
   selector: 'app-faqs',
   templateUrl: './faqs.component.html',
   styleUrls: ['./faqs.component.css']
 })
-export class FaqsComponent implements AfterViewInit {
-  @ViewChildren('accordionButton') accordionButtons!: QueryList<ElementRef<HTMLButtonElement>>;
+export class FaqsComponent implements OnInit {
+	selectedCategory!: FaqCategorySolution;
 
-  ngAfterViewInit() {
-    this.accordionButtons.forEach(button => {
-      button.nativeElement.addEventListener('click', () => this.toggleAccordion(button.nativeElement));
-    });
-  }
+	categSolutions!: FaqCategorySolution[];
+	constructor(
+		private faqService: FaqsServiceService) {
+			this.faqService.getAllCategorySolutions(0).subscribe(data => {this.categSolutions = data});
+	}
 
-  toggleAccordion(button: HTMLButtonElement) {
-    const itemToggle = button.getAttribute('aria-expanded');
+	ngOnInit(): void {
+	}
 
-    this.accordionButtons.forEach(button => {
-      button.nativeElement.setAttribute('aria-expanded', 'false');
-    });
-
-    if (itemToggle === 'false') {
-      button.setAttribute('aria-expanded', 'true');
-    }
-  }
+	getCategory(categ:FaqCategorySolution) {
+	this.selectedCategory=categ;
+	}
 }

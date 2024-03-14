@@ -82,10 +82,12 @@
           </div> -->
         </div>
 
-        <div class="col-md-4 ml-3 pt-5">
+        <div class="col-md-4 pt-5">
+
+
           <img *ngIf="dean" [title]="dean.staff_details.title+ ' '+dean.staff_details.initials +' '+dean.staff_details.last_name+ ': Dean' "
           class="img-thumbnail img-fluid dean" data-descr="dean.staff_details.title+ ' '+dean.staff_details.initials +' '+dean.staff_details.last_name+ ': Dean' "
-          [src]="this.serverDetails.serverUrlForStrorage +'/'+dean.staff_details.picUrl" />
+          [src]="this.serverDetails.serverUrlForStrorage +'/'+dean.staff_details.picUrl" width="500" />
           <img *ngIf="!dean"
           class="img-thumbnail img-fluid dean"
           src="assets/img/avata.jpeg" />
@@ -158,7 +160,7 @@
                   <tbody>
                     <tr class="py-0" *ngFor="let program of department.programs">
                       <td class="py-0">
-                        <a class="small text-success" style="font-size: 13px;" [routerLink]="['/', 'programs', webUrlService.getUrl(program.id)]">
+                        <a class="small text-success" style="font-size: 13px;" [routerLink]="['/', 'program', webUrlService.getUrl(program.id)]">
                           {{ program.title }}
                         </a>
                       </td>
@@ -361,7 +363,7 @@
           <div class="overflow-hidden" *ngIf="i>=4">
             <div class="staff-card">
               <div class="card-image">
-                <img [src]="storageUrl+'/'+staff.staff_details.picUrl" alt="" />
+                <img  [src]="storageUrl+'/'+staff.staff_details.picUrl" alt="" />
               </div>
               <div class="card-content">
                 <h5 class="fw-bold mb-0">Title: {{ staff.staff_details.title }}</h5>

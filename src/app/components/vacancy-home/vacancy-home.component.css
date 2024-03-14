@@ -98,6 +98,7 @@ h6{
   background-color: #24b0ed !important;
   border-color: #24b0ed !important;
   box-shadow: none;
+  border-radius: 0px;
 }
 
 
@@ -111,6 +112,7 @@ h6{
   -webkit-box-shadow: 10px 10px 5px 0px rgba(230, 227, 227, 0.931);
 -moz-box-shadow: 10px 10px 5px 0px rgba(255, 253, 253, 0.975);
 box-shadow: 10px 10px 5px 0px rgba(238, 238, 238, 0.952);
+border-radius: 0px;
 }
 
 

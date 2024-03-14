@@ -17,58 +17,75 @@
   </div>
 </section>
 
-<section>
-<div class="container">
-  <div class="row col-md-12">
-    <div class="col-md-4">
-      <div class="questions-box">
-        <h3 class="ml-5">Questions by Topic</h3>
-
-        <hr>
-        <div class="questions-content ml-5">
-          <ul>
-            <li><a href="">Questions about CUT</a></li>
-            <li><a href="">Applying to CUT</a></li>
-            <li><a href="">International Students</a></li>
-            <li><a href="">Visiting Undergraduate Students</a></li>
-            <li><a href="">Admissions</a></li>
-
-          </ul>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="col-md-8">
-    <div class="solutions-box">
-      <div class="qstn-solutions">
-        <h3 class="ml-5">Questions about CUT</h3>
-
-        <p>General</p>
-      </div>
-
-    </div>
-    <div class="solutions-box">
-      <div class="qstn-solutions">
-
-          <div class="accordion">
-            <div class="accordion-item">
-              <button id="accordion-button-1" aria-expanded="false" #accordionButton><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
-              <div class="accordion-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+<section class="bg-light" id="history">
+  <div class="container py-4 px-0">
+      <div class="row">
+          <div class="col-sm-11 mx-auto col-md-4 col-xs-12 text-center">
+              <h5 class="text-black">
+                  <i class="fas fa-buffer" aria-hidden="true"></i> INFORMATION CATEGORIES
+              </h5>
+              <div class="d-flex flex-column container font-weight-bold bg-white py-4" data-aos-duration="1500" data-aos="zoom-out-up">
+                  <a  class="btn btn-outline-primary rounded-0
+          btn-block text-uppercase">
+          Brief introduction
+        </a>
+                  <a class="btn btn-outline-primary rounded-0 btn-block text-uppercase" *ngFor="let
+          faq of categSolutions" (click)="getCategory(faq)">{{faq.category_description}}</a>
               </div>
-            </div>
-            <!-- Repeat the same structure for other accordion items -->
+          </div>
+          <div *ngIf="selectedCategory" class="col-sm-12 col-md-8 col-lg-8 mx-auto
+      px-0">
+              <h5 class="text-blue">
+                  <i class="fas fa-briefcase"></i> {{selectedCategory.category_description}}
+              </h5>
+              <div *ngIf="selectedCategory.questions" id="accordion">
+
+                  <div *ngFor="let
+          qsn of selectedCategory.questions; let rowIndex= index" class="card">
+                      <div class="card-header" id="heading{{rowIndex}}">
+                          <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" [attr.data-target]="'#collapse'+rowIndex" aria-expanded="false" [attr.aria-controls]="'collapse'+rowIndex">
+                {{qsn.question_bul_num}} {{qsn.the_question}}
+              </button>
+                          </h5>
+                      </div>
+
+                      <div id="collapse{{rowIndex}}" class="collapse" [attr.aria-labelledby]="'heading'+rowIndex" data-parent="#accordion">
+                          <div class="p-3 py-3">
+                              <div *ngIf="qsn.ans_headers" class="card-body">
+                                  <div *ngFor="let hed of qsn.ans_headers">
+                                      {{hed.header_bul_num}} {{hed.header_name}}
+                                      <br>
+                                      <p *ngFor="let ans of hed.answers" [innerHTML]="ans.answer_description">
+                                          <!-- {{ans.answer_description}} -->
+                                      </p>
+                                      <hr>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div *ngIf="!selectedCategory" class="col-sm-12 col-md-8 col-lg-8 mx-auto
+      px-md-0">
+              <h5 class="px-3 text-black">
+                  <i class="fa fa-question-circle" aria-hidden="true"></i> Brief Introduction
+
+              </h5>
+              <div class="p-3 py-3">
+                  <div class="card">
+                      <div class="card-body">
+                          The CUT ICT Helpdesk personnel are an amiable team of multi-skilled experts who are dedicated to availing a spectrum of technical support services that enable users to configure their ICT equipment so that it connects safely, effectively and efficiently
+                          to the CUT network. The CUT Helpdesk consultants assist students, staff; and third parties; alike in a variety of support related aspects like managing password changes, providing basic Windows support, as well as hardware
+                          troubleshooting. The CUT ICT Helpdesk Office is conveniently located right at the centre of the ICT Building block.<br> Office Hours: Monday - Thursday 08h00 - 16h30 and Fridays 08h00 - 15h30.
+                      </div>
+                  </div>
+              </div>
+
           </div>
 
-
-
       </div>
-
-    </div>
-    </div>
-
   </div>
-</div>
 </section>

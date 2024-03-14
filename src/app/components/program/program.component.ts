@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProgramServiceService } from '../../services/program-service.service';
 import { WebUrlServiceService } from '../../services/web-url-service.service';
 import { ProgrammeAttendanceTypeServiceService } from '../../services/programme-attendance-type-service.service';
+import { ServerDetails } from '../../models/server-details';
 
 @Component({
   selector: 'app-program',
@@ -13,7 +14,8 @@ import { ProgrammeAttendanceTypeServiceService } from '../../services/programme-
 })
 export class ProgramComponent {
   programmeAttendanceType = new ProgrammeAttendanceType();
-
+  serverDetails = new ServerDetails();
+  storageUrl =  this.serverDetails.serverUrlForStrorage;
   program:any;
   school:any;
   programmeAttendanceTyp:any;

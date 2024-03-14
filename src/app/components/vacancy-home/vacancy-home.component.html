@@ -23,13 +23,22 @@
 
 
                    <div class="col-md-10 ">
-                       <input type="text" class="form-control" placeholder="find job here">
+
+                       <input id="search" #query (keyup.enter)="search(query.value)"
+                       class="form-control rounded-0 " type="text" name="search" placeholder=" Find a job here">
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-secondary btn-block"><i class="fa-solid fa-binoculars mr-2"></i>Find Job</button>
+                        <button (click)="search(query.value)" class="btn btn-secondary btn-block"><i class="fa-solid fa-binoculars mr-2"></i>Find Job</button>
                     </div>
                 </div>
                 <div class="mt-3">
+                  <div *ngIf="mySearch">
+                    <h6>
+                      <i>
+                        Search results for: {{ query.value }}
+                      </i>
+                    </h6>
+                  </div>
               </div>
             </div>
         </div>
@@ -75,85 +84,48 @@
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-company" role="tabpanel" aria-labelledby="pills-company-tab">
           <div class="container-fluid">
-            <h2 class="mb-3 font-weight-bold">Jobs</h2>
+            <!-- <h2 class="mb-3 font-weight-bold">Jobs</h2> -->
+            <table class="table  table-inverse ">
 
+              <tbody>
+                <tr *ngFor="let item of filteredVacancies" class="cursor-pointer"
+                  [routerLink]="'/vacancies/entry'" (click)="changeEntry(item)">
+                  <td scope="row" class="d-flex justify-content-center align-items-center">
+                    <div class="bg-light">
+                      <i class="fas fa-briefcase" aria-hidden="true"></i>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-flex flex-column ">
+                      <span class="text-uppercase mb-0 font-weight-bold">
+                        {{ item.title }}
+                      </span>
+                      <span class="text-muted">
+                        Chinhoyi University of Technology |
+                        <span *ngIf="item.location">
+                          {{ item.location }} |
 
-            <div class="accordion-wrap">
-              <a style="text-decoration: none;" class="accordion" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="false" >
-              <div class="teaser">
-                <div class="time">
-                  <h5><i style="color: #24b0ed;" class="fa-solid fa-briefcase fa-xl"></i></h5>
-                </div>
+                        </span>
+                        <span class="" *ngIf="item.type">
+                          {{ item.type }} |
+                        </span>
+                      </span>
 
-                <div class="title">
-                  <h5>Reprographics Attendant (1 Post)-INTERNAL ADVERTISEMENT</h5>
-                  <h6 class="theme">Chinhoyi University of Technology | Permanent <span class="justify-content-end ml-5">posted Dec 8, 2023</span></h6>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="small font-weight-bold">
+                      posted
+                      {{ item.created_at | date }}
 
-                </div>
-              </div>
-
-                <div class="collapse" id="collapseOne">
-              <div class="content">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-
-                <div class="accordion-toggle">
-                  <span class="one"></span>
-                  <span class="two"></span>
-                </div>
-              </a>
-
-
-              <a style="text-decoration: none;" class="accordion" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" >
-              <div class="teaser">
-                <div class="time">
-                  <h5><i style="color: #24b0ed;" class="fa-solid fa-briefcase fa-xl"></i></h5>
-                </div>
-
-                <div class="title">
-                  <h5 >Reprographics Attendant (1 Post)-INTERNAL ADVERTISEMENT</h5>
-                  <h6 class="theme">Chinhoyi University of Technology | Permanent <span class="justify-content-end ml-5">posted Dec 8, 2023</span></h6>
-                </div>
-                </div>
-
-                <div class="collapse" id="collapseTwo">
-              <div class="content">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-
-                <div class="accordion-toggle">
-                  <span class="one"></span>
-                  <span class="two"></span>
-                </div>
-              </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
 
 
-              <a style="text-decoration: none;" class="accordion" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" >
-              <div class="teaser">
-                <div class="time">
-                  <h5><i style="color: #24b0ed;" class="fa-solid fa-briefcase fa-xl"></i></h5>
-                </div>
-                <div class="title">
-                  <h5 style="text-decoration: none;">Reprographics Attendant (1 Post)-INTERNAL ADVERTISEMENT</h5>
-                  <h6 class="theme">Chinhoyi University of Technology | Permanent <span class="justify-content-end ml-5">posted Dec 8, 2023</span></h6>
-                </div>
-                </div>
-
-                <div class="collapse" id="collapseThree">
-              <div class="content">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-
-                <div class="accordion-toggle">
-                  <span class="one"></span>
-                  <span class="two"></span>
-                </div>
-              </a>
-            </div>
 
           </div>
         </div>
