@@ -2,7 +2,7 @@
 
     background: rgba(0, 0, 0, 0.596);
     position: relative;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transform: translateY(-170px);
     display: flex;
@@ -51,11 +51,10 @@
   .crdd {
     background-color: #fff;
     position: relative;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transform: translateY(-170px);
     display: flex;
-    border-radius: 0 0 10px 10px;
     max-width: 60%;
     margin: 0 auto;
 }
@@ -92,11 +91,13 @@
     color: #777676;
     background: #fff;
     position: relative;
+    border-radius: 0px;
 }
 
 .nav-pills-custom .nav-link.active {
     color: #fff;
     background: #24b0ed;
+
 }
 
 
@@ -205,7 +206,8 @@ a:hover {
 .btn {
   font-size: 14px;
   padding: 9px 16px;
-  border-radius: 2px;
+  border-radius: 0px;
+  border: none;
 }
 
 
@@ -230,9 +232,9 @@ a:hover {
   padding: 10px 29px;
   color: #71748d;
   background-color: #dddde8;
-  -webkit-border-radius: 4px 0px 0px 4px;
-  -moz-border-radius: 4px 0px 0px 4px;
-  border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
 }
 
 .tab-vertical .nav-tabs .nav-link.active {
@@ -249,9 +251,7 @@ a:hover {
 
 .tab-vertical .tab-content {
   overflow: auto;
-  -webkit-border-radius: 0px 4px 4px 4px;
-  -moz-border-radius: 0px 4px 4px 4px;
-  border-radius: 0px 4px 4px 4px;
+  border-radius: 0px;
   background: #fff;
   padding: 30px;
   display: flex;
@@ -335,3 +335,4 @@ small{
   transform:rotateY('angle');
 
 }
+

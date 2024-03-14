@@ -1615,6 +1615,7 @@ background: #fff !important;
   height: 40%;
   background: url("../images/adm-banner.jpeg") no-repeat;
   background-size: cover;
+  border-bottom: 5px solid #24b0ed;
 }
 
 .feature-inner {
