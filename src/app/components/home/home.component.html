@@ -4,8 +4,10 @@
     <div class="col-md-10 bg-blue">
       <div class="caption-txt">
         <h1 class="light lg wow fadeInLeft big-font" data-wow-delay="0.1s">
-          <span [innerHTML]="currentNewsItem?.title| slice: 0:80"></span>...
+          <span [innerHTML]="currentNewsItem?.title | slice: 0:80"  [routerLink]="'/news/' + currentNewsItem?.id"></span>
         </h1>
+
+
         <p class="light format" data-wow-delay="0.3s">
           <!-- {{}} -->
           <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia odio aspernatur sapiente quas veniam. Asperiores deleniti inventore voluptates impedit modi voluptate libero sunt expedita iste porro, doloribus soluta illum nobis. -->

@@ -1,0 +1,65 @@
+<section class="section pt-0">
+  <div class="col-md-12 banner">
+    <img  class="banner-img" [src]="storageUrl+'/'+article.picUrl" alt="" />
+  <div class="crd mx-auto">
+    <div class="col-md-12 col-sm-12">
+        <div class="wrapp">
+            <h2 class="pt-1 white text-center"><i class="fa-solid fa-link mr-2"></i>{{article.title}}</h2>
+        </div>
+    </div>
+</div>
+  </div>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="text-muted col-sm-12 col-md-12 col-lg-12 pb-5 pt-4 mt-4">
+				<div class="card rounded-0 shadow ">
+					<!-- <img *ngIf="article" class="card-img-top rounded-0 img-fluid" style="max-height: 30rem;"
+						[src]="serverDetails.serverUrlForStrorage + '/' + article.picUrl" alt="" /> -->
+					<div class="card-body">
+						<span class="news-date shadow date">
+							{{article.created_at |date:'dd MMM yyyy'}}
+						</span>
+						<!-- <h3 class="text-primary date pt-5">
+							{{article.title}}
+						</h3> -->
+						<p class=" pt-5" *ngIf="article" [innerHTML]="article.story">
+							<!-- {{ article.story }} -->
+						</p>
+						<a class="btn btn-link text-uppercase " *ngIf="article.linkUrl" [href]="serverDetails.serverUrlForStrorage +'/'+ article.linkUrl" target="_blank" rel="noopener noreferrer">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="news">
+	<div class="container">
+		<div class="row py-3">
+			<div class="col-sm-11 col-md-12 row mx-auto " *ngIf="news">
+				<div *ngFor="let item of news.slice(0,8) let i=index" routerLink="/news/{{item.id}}"
+					class=" my-1   rounded-0 cursor-pointer col-sm-4 col-md-4 col-lg-3 mx-auto" >
+					<div class="card rounded-0">
+						<div class="card-body p-0">
+							<img [src]="serverDetails.serverUrlForStrorage+'/'+item.picUrl" alt=""
+								class="card-img rounded-0" style="max-height: 14rem;">
+							<small class="mx-1 text-muted text-center ">
+								<i class="far fa-calendar    "></i> {{item.created_at | date:'mediumDate'}}
+							</small>
+							<h6 class="mx-1 small font-weight-bold text-primary">{{item.title | slice:0:50}}</h6>
+
+						</div>
+						<button [routerLink]="'/news/'+item.id"  class="btn btn-link text-primary text-left"> <i class="fas fa-file-word"
+								aria-hidden="true"></i> read more</button>
+					</div>
+				</div>
+				<div class="col-12 d-flex justify-content-center align-items-center my-2">
+					<a routerLink="/news" class="btn btn-outline-primary mx-auto rounded-0"> more news</a >
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section>

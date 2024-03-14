@@ -24,6 +24,7 @@ import { OnlineDirectoryComponent } from './components/online-directory/online-d
 import { HttpClientModule } from '@angular/common/http';
 import { NoticeHomeComponent } from './components/notice-home/notice-home.component';
 import { NewsComponent } from './components/news/news.component';
+import { ArticlesComponent } from './components/articles/articles.component';
 
 
 
@@ -47,6 +48,7 @@ import { NewsComponent } from './components/news/news.component';
     OnlineDirectoryComponent,
     NoticeHomeComponent,
     NewsComponent,
+    ArticlesComponent,
   ],
   imports: [
     BrowserModule,
