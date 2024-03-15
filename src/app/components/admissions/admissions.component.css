@@ -335,4 +335,16 @@ small{
   transform:rotateY('angle');
 
 }
+.nav-pills .nav-link.active{
+  background: #24b0ed;
+  border: 2px solid #24b0ed;
+  color: #fff;
+}
+.nav-pills .nav-link{
 
+  color: #24b0ed;
+}
+.border-primary{
+  background: #24b1ed29;
+
+}

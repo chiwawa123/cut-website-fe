@@ -106,20 +106,22 @@
 
 		<div class="columns is-gapless is-multiline">
 
-      <section id="programs">
+
         <div class="container-fluid">
-          <div class="row">
+          <div class="row" style="border: 1px solid #24b0ed;">
             <div class="col-12  py-2 my-4">
               <h3 class="text-center text-black" data-aos="flip-right">
                 <i class="fas fa-graduation-cap fa-1x  "></i> Our Programs
               </h3>
+
             </div>
+
 
             <div class="col-sm-12 col-md-12 row">
               <!-- <h6 class="text-center"> <i class="fas fa-calendar-alt   fa-fw"></i> </h6> -->
               <div class="nav col-md-4 col-lg-3  nav-pills d-none d-md-block" role="tablist"
-                aria-orientation="vertical" style="max-height: 60vh; overflow: scroll; overflow-x: hidden;"
-                data-aos="fade-right">
+                aria-orientation="vertical"
+                data-aos="fade-right" >
                 <button href="#" *ngFor="let item of schools; let i=index" (click)="selected(i)"
                   class="nav-link small btn btn-link btn-small text-left btn-lg-block "
                   [ngClass]="{'active': indexSelected==i}" id="v-pills-home-tab" data-toggle="pill" role="tab"
@@ -128,12 +130,12 @@
                 </button>
               </div>
 
-              <div class="col-md-8 col-lg-9 col-sm-12" *ngIf="selectedSchool">
+              <div class="col-md-8 col-lg-9 col-sm-12" *ngIf="selectedSchool" style="background-color: #b3b1b127;">
                 <div class="tab-pane fade show " id="v-pills-home" role="tabpanel"
                   aria-labelledby="v-pills-home-tab">
                   <div class="row">
                     <div class="col-12 border-bottom border-primary">
-                      <h5 class="text-center text-black mx-3" *ngIf="schools">
+                      <h5 class="text-center text-black mx-3 pt-3" *ngIf="schools" >
                         {{schools[indexSelected].name}}
                       </h5>
 
@@ -165,8 +167,8 @@
                       data-aos-duration="1000" data-aos-anchor-placement="bottom-center">
 
                       <div class="border-bottom-0 row">
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                          <h6>Programs</h6>
+                        <div class="col-sm-12 col-md-12 col-lg-6" >
+                          <h3 class="text-center">Programs</h3>
                           <ul class="small  ">
                             <li class="text-primary cursor-pointer"
                               *ngFor="let item of selectedPrograms; let i=index"
@@ -174,8 +176,8 @@
                           </ul>
 
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6 ">
-                          <h6>School Events</h6>
+                        <div class="col-sm-12 col-md-12 col-lg-6 " >
+                          <h3>School Events</h3>
                           <div *ngIf="selectedSchool">
                             <div *ngFor="let item of selectedSchool.events; let i=index"
                               class="d-flex flex-row my-1  shadow rounded-0  cursor-pointer ">
@@ -213,7 +215,6 @@
           <div class="row order-bottom py-1">
           </div>
         </div>
-      </section>
 
 
 
