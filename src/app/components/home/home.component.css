@@ -112,13 +112,13 @@ h4{
     padding: 0;
   }
   .caption-txt{
-    width: 580px;
+    width: 35%;
     padding: 150px 30px;
 
   }
   .lg{
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size:2rem;
   }
 
 
@@ -434,7 +434,8 @@ h4{
   max-height:68vh;
   width: 100%;
    object-fit: cover;
-   margin: 25px 0px;
+  padding-top: 25px;
+
 }
 
 
@@ -541,6 +542,21 @@ padding-left: 20px;
   }
 
   .slider-up {
+    order: 1 !important;
+    padding-right: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+  }
+
+  .slider-gesture{
+    padding-top: 0px !important;
+  }
+
+  .cut-exp-img{
+    order: 2 !important;
+  }
+
+  .cut-exp-content{
     order: 1 !important;
   }
 }

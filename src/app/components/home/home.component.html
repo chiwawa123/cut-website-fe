@@ -12,15 +12,15 @@
           <!-- {{}} -->
           <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia odio aspernatur sapiente quas veniam. Asperiores deleniti inventore voluptates impedit modi voluptate libero sunt expedita iste porro, doloribus soluta illum nobis. -->
         </p>
-        <a class="white btn btn-primary" style="display:block;width:150px;border-radius: 0px; text-transform: lowercase;">
+        <a class="white btn btn-primary slider-bttn">
           View More <i class="fa fa-long-arrow-right"></i>
         </a>
       </div>
     </div>
-    <div class="col-md-8 slider-up">
+    <div class="col-md-9 slider-up">
       <ngb-carousel (slide)="slideEvent($event)" class="carousel-container">
         <ng-template ngbSlide *ngFor="let slide of sliderNews; let index = index">
-          <img [src]="storageUrl+'/'+slide.picUrl" class="slider-gesture" alt="Slide 1" />
+          <img [src]="storageUrl+'/'+slide.picUrl" class="slider-gesture" alt={{slide.title}} />
           <div class="carousel-caption"></div>
         </ng-template>
       </ngb-carousel>
@@ -99,7 +99,7 @@
       <div class="row col-md-12">
         <div class="col-md-6 mt-5 fadeInLeft wow" data-wow-delay="0.1s">
           <h2 style="font-weight: 700;" class="text-uppercase"><span style="border-left: 5px solid #24b0ed; margin-right: 10px; "></span>Study at CUT</h2>
-          <p style="text-align: justify;" class="pr-5">Cut produces graduates whose credentials are acknowledged worldwide and have practical relevance in local contexts. These qualifications are supported by a commitment to active participation in society and the promotion of fairness.</p>
+          <p style="text-align: justify;">Cut produces graduates whose credentials are acknowledged worldwide and have practical relevance in local contexts. These qualifications are supported by a commitment to active participation in society and the promotion of fairness.</p>
           <div class="row col-md-12">
             <div class="left col-md-6">
               <ul class="">
@@ -209,10 +209,10 @@
 		</div>
 
     <div class="row col-md-12">
-			<div class="col-md-6 fadeInUp wow" style="transform: translateY(35px);" data-wow-delay="0.6s">
+			<div class="col-md-6 fadeInUp wow cut-exp-img" style="transform: translateY(35px);" data-wow-delay="0.6s">
 				<img src="assets/images/home-2.png">
 			</div>
-			<div class="col-md-6 mt-5 fadeInRight wow" data-wow-delay="0.7s">
+			<div class="col-md-6 mt-5 fadeInRight wow cut-exp-content" data-wow-delay="0.7s">
 			<p class="top-space"  style="color: rgb(242,242,242);" >Campus Life</p>
 			<h2 class="title"><span style="border-left: 5px solid #caa350; margin-right: 10px; "></span>CUT Campus Life</h2>
 
