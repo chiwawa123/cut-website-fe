@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NoticeHomeComponent } from './components/notice-home/notice-home.component';
 import { NewsComponent } from './components/news/news.component';
 import { ArticlesComponent } from './components/articles/articles.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 
@@ -57,6 +58,7 @@ import { ArticlesComponent } from './components/articles/articles.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    CarouselModule.forRoot(),
   ],
   providers: [NgbCarouselConfig],
   bootstrap: [AppComponent]

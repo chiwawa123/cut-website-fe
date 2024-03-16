@@ -15,7 +15,7 @@ import { NgbSlideEvent } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  t:any
 	newsData!: Array<any>;
 	eventsData: Array<Events> | undefined;
 	serverDetails = new ServerDetails();
@@ -34,13 +34,13 @@ storageUrl =  this.serverDetails.serverUrlForStrorage;
     private dataMonitor: DataMonitorServiceService
   ) {
     this.newsService.getNewsForSlider().subscribe((data: Array<News>) => {
-      console.log('Slider News:', data); // Debugging statement
+      // console.log('Slider News:', data); // Debugging statement
       this.sliderNews = data;
       this.dataMonitor.changeStatus();
     });
 
     this.newsService.getMainNews().subscribe(data => {
-      console.log('Main News:', data); // Debugging statement
+      // console.log('Main News:', data); // Debugging statement
       this.mainNews = data;
     });
 
@@ -60,7 +60,9 @@ storageUrl =  this.serverDetails.serverUrlForStrorage;
 		});
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   getBackgroundImage(news: News) {
     const backgroundImageUrl = this.serverDetails.serverUrlForStrorage + '/' + news.picUrl;
