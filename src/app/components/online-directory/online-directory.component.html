@@ -32,8 +32,51 @@
           </ol>
           <h5>Search</h5>
           <div class=" search row">
-            <input type="text" id="search-input" style="border: #2b2a2a;" name="search-input" placeholder="Enter your search query">
+            <input type="text" id="search-input" style="border: #2b2a2a;" name="search-input" #query (keyup)="search(query.value)" placeholder="name, department, extension">
+
+
+
+            <p *ngIf="searchResults"><i>  Search results for  <b> {{query.value}}</b></i></p>
+            <table class="table table-light" *ngIf="searchResults">
+                <thead class="thead-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Employee Name</th>
+                        <th>Designation</th>
+                        <th>Department</th>
+                        <th>Extension</th>
+                        <th>VoIP</th>
+                        <th>DirectLine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of searchResults; let i= index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{item.name}}
+                        </td>
+                        <td>
+                            {{item.occupation}}
+                        </td>
+                        <td>
+                            {{item.department? item.department?.department_name:'---'}}
+                        </td>
+                        <td>
+                            {{item.extention?item.extention:'---'}}
+                        </td>
+                        <td>
+                            {{item.extention?item.voip:'---'}}
+                        </td>
+                        <td>
+                            {{item.direct_line?item.direct_line:'---'}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
           </div>
+
         </div>
 
       </div>
