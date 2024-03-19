@@ -20,7 +20,7 @@
     <div class="row pt-5">
       <div class="col-md-2">
         <button class="btn btn-block btn-outline directorate-tabs" >Welcome</button>
-        <button class="btn btn-block btn-outline directorate-tabs" >Oiur Staff</button>
+        <button class="btn btn-block btn-outline directorate-tabs" >Our Staff</button>
         <button class="btn btn-block btn-outline directorate-tabs" >Contact Us</button>
       </div>
       <div class="col-md-7" *ngIf="directorate && directorate.description">
@@ -53,10 +53,32 @@
     <div class="container">
       <div class="row flex pt-4" *ngIf="directorate.description">
         <div class="col-md-4">
-          <div class="cllg_vission wow fadeInUp"  data-wow-delay="0.3s">
+          <div class="cllg_vission wow fadeInUp" data-wow-delay="0.3s">
             <h5 class="text-center pt-5" *ngIf="directorate.description.mission">Mission</h5>
-            <p class="format text-center"><span *ngIf="directorate.description.mission"  [innerHTML]="directorate.description.mission"></span></p>
+            <p class="format text-center">
+              <span *ngIf="directorate.description.mission" [innerHTML]="directorate.description.mission | slice:0:180"></span>
+              <span *ngIf="directorate.description.mission.length > 180" data-toggle="modal" data-target="#exampleModal">...</span>
+            </p>
+          </div>
 
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mission</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p [innerHTML]="directorate.description.mission"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
@@ -69,8 +91,32 @@
         <div class="col-md-4">
           <div class="cllg_values wow fadeInUp"  data-wow-delay="0.7s"  *ngIf="directorate && directorate.description">
             <h5 class="text-center pt-5">Values</h5>
-            <p class="format text-center" [innerHTML]="directorate.description.values"></p>
 
+            <p class="format text-center">
+              <span *ngIf="directorate.description.values" [innerHTML]="directorate.description.values | slice:0:180"></span>
+              <span *ngIf="directorate.description.values.length > 180" data-toggle="modal" data-target="#exampleModal2">...</span>
+            </p>
+
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Values</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p [innerHTML]="directorate.description.values"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

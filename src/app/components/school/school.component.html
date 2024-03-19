@@ -111,23 +111,91 @@
         <div class="col-md-4">
           <div class="cllg_vission wow fadeInUp"  data-wow-delay="0.3s" *ngIf="school.description.vision">
             <h5 class="text-center pt-5">Vision</h5>
-            <p class="format text-center" 	[innerHTML]="school.description.vision"></p>
+
+            <p class="format text-center">
+              <span *ngIf="school.description.vision" [innerHTML]="school.description.vision | slice:0:180"></span>
+              <span *ngIf="school.description.vision.length > 180" data-toggle="modal" data-target="#exampleModal">...</span>
+            </p>
 
           </div>
+               <!-- Modal -->
+               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Vision</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p [innerHTML]="school.description.vision"></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
         <div class="col-md-4">
           <div class="cllg_mission wow fadeInUp"  data-wow-delay="0.5s" *ngIf="school.description.mission">
             <h5 class="text-center pt-5">Mission</h5>
-            <p class="format text-center" [innerHTML]="school.description.mission"></p>
+            <p class="format text-center">
+              <span *ngIf="school.description.mission" [innerHTML]="school.description.mission | slice:0:180"></span>
+              <span *ngIf="school.description.mission.length > 180" data-toggle="modal" data-target="#exampleModal1">...</span>
+            </p>
 
           </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mission</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p [innerHTML]="school.description.mission"></p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
         </div>
         <div class="col-md-4">
           <div class="cllg_values wow fadeInUp"  data-wow-delay="0.7s"  *ngIf="school.description.values">
             <h5 class="text-center pt-5">Values</h5>
-            <p class="format text-center" [innerHTML]="school.description.values" ></p>
+
+            <p class="format text-center">
+              <span *ngIf="school.description.values" [innerHTML]="school.description.values | slice:0:180"></span>
+              <span *ngIf="school.description.values.length > 180" data-toggle="modal" data-target="#exampleModal2">...</span>
+            </p>
 
           </div>
+                 <!-- Modal -->
+                 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Values</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p [innerHTML]="school.description.values"></p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
         </div>
 
       </div>
