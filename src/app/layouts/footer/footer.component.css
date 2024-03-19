@@ -5,7 +5,7 @@
 
   .whyte{
     color: #fff;
-   
+
   }
 
   ul li {
@@ -28,4 +28,8 @@ h4{
   opacity: 0.6;
 
 }
+.list-inline-item:hover{
+color: #fff !important;
+}
+
 

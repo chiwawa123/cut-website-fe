@@ -114,7 +114,7 @@
 
             <p class="format text-center">
               <span *ngIf="school.description.vision" [innerHTML]="school.description.vision | slice:0:180"></span>
-              <span *ngIf="school.description.vision.length > 180" data-toggle="modal" data-target="#exampleModal">...</span>
+              <span style="color: #24b0ed;cursor: pointer;"  *ngIf="school.description.vision.length > 180" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-arrow-right pr-2" ></i>Read more</span>
             </p>
 
           </div>
@@ -143,7 +143,7 @@
             <h5 class="text-center pt-5">Mission</h5>
             <p class="format text-center">
               <span *ngIf="school.description.mission" [innerHTML]="school.description.mission | slice:0:180"></span>
-              <span *ngIf="school.description.mission.length > 180" data-toggle="modal" data-target="#exampleModal1">...</span>
+              <span  style="color: #24b0ed;cursor: pointer;" *ngIf="school.description.mission.length > 180" data-toggle="modal" data-target="#exampleModal1"><i class="fa-solid fa-arrow-right pr-2" ></i>Read more</span>
             </p>
 
           </div>
@@ -173,7 +173,7 @@
 
             <p class="format text-center">
               <span *ngIf="school.description.values" [innerHTML]="school.description.values | slice:0:180"></span>
-              <span *ngIf="school.description.values.length > 180" data-toggle="modal" data-target="#exampleModal2">...</span>
+              <span style="color: #24b0ed;cursor: pointer;"  *ngIf="school.description.values.length > 180" data-toggle="modal" data-target="#exampleModal2"><i class="fa-solid fa-arrow-right pr-2" ></i>Read more</span>
             </p>
 
           </div>
