@@ -19,11 +19,14 @@ export class NoticeHomeComponent {
   picUrl!: string;
 
 
+
+
 	article!: Notice;
 	news!: Notice[];
 	// mainNews: News;
 
 	serverDetails: ServerDetails = new ServerDetails();
+  storageUrl =  this.serverDetails.serverUrlForStrorage;
 	constructor(
 		private route: ActivatedRoute,
 		private newsService: NewsServiceService

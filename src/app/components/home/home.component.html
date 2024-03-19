@@ -19,11 +19,11 @@
     </div>
     <div class="col-md-9 slider-up">
 
-  <carousel>
-  <slide *ngFor="let slide of sliderNews; let index = index">
-    <img [src]="storageUrl+'/'+slide.picUrl" class="slider-gesture" alt="{{slide.title}}" />
-  </slide>
-</carousel>
+      <carousel (slide)="slideEvent($event)">
+        <slide *ngFor="let slide of sliderNews; let index = index">
+          <img [src]="storageUrl+'/'+slide.picUrl" class="slider-gesture" alt="{{slide.title}}" />
+        </slide>
+      </carousel>
 
       <!-- <ngb-carousel (slide)="slideEvent($event)" class="carousel-container">
         <ng-template ngbSlide *ngFor="let slide of sliderNews; let index = index">

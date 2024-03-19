@@ -46,6 +46,9 @@
   .crdd ul a{
     color: #000;
   }
+  .crdd ul a:hover{
+    color: #fff !important;
+  }
 
 
   .crdd {

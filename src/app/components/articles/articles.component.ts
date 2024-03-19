@@ -37,7 +37,7 @@ export class ArticlesComponent {
 			this.newsService.getMainNews().subscribe(nhau => this.mainNews = nhau);
 			// this.shuffle(this.news);
 		})
-		// const id = <number><unknown>this.route.snapshot.paramMap.get('id');
+
 	}
 	readMore(id: any){
 		alert(id)

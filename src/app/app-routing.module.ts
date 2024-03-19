@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:'admission',component:AdmissionsComponent},
   {path:'online-directory',component:OnlineDirectoryComponent},
   { path: 'school/:id', component: SchoolComponent },
-  {path:'directorate',component:DirectorateComponent},
+  {path:'directorate/:id',component:DirectorateComponent},
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
   {path:'program/:id',component:ProgramComponent},

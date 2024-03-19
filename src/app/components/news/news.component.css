@@ -40,3 +40,12 @@
   text-align: center;
 
 }
+.card {
+  height: 300px; /* Set the desired fixed height for the card */
+}
+
+.card-img-top {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}

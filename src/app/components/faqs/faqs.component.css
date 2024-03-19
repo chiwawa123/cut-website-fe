@@ -177,4 +177,12 @@
       margin: 2em 0;
     }
   }
+  .btnn{
+    border: 1px solid #caa350 !important;
+    outline: none;
+
+  }
+  .card{
+    border-radius: 0px !important;
+  }
 }

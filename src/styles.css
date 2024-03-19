@@ -2,3 +2,26 @@
 
 
 
+.btn-outline-primary
+{
+  border: 1px solid #caa350;
+}
+
+.btn-outline-primary:hover
+{
+ background-color: #24b0ed;
+ color: #ffff !important;
+ background: #24b0ed;
+
+}
+.btn-link{
+  text-decoration: none !important;
+  color: #24b0ed;
+}
+.btn-link:hover{
+  text-decoration: none !important;
+  color: #caa350 !important;
+}
+.card{
+  border-radius: 0px !important;
+}

@@ -141,4 +141,8 @@ a{
   font-size: 17px;
 }
 
-
+.directorate-tabs{
+  border-color: #caa350; margin-top: 3px;
+  border-radius: 0px;
+  margin: 5px;
+}
