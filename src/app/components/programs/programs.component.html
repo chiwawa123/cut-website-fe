@@ -18,7 +18,6 @@
         <div class="row">
           <div class=" pt-4 bg-primary">
             <div class="">
-
                 <div class="input-group   ">
                     <input #search (keyup)="filterPrograms(search.value)" type="text" class="form-control" ngModel="search" aria-label="" placeholder="Search for programs ...">
                 </div>
@@ -30,43 +29,39 @@
                         <a class="link-style" *ngFor="let school of schools" [routerLink]="['/','school',webUrlService.getUrl(school.id)]">
                             <span class="d-block  m-0 pt-1 small text-uppercase">{{school.name | slice:0:50}} </span>
                         </a>
-
                     </div>
                 </div>
             </div>
         </div>
-
         </div>
-
         </div>
-
         <div class="col-md-8">
           <h2 class="text-center date border-bottom pb-3">
             <i class="fas fa-graduation-cap fa-lg"></i> Browse Degree Programmes
           </h2>
-          <div class="row d-flex" *ngIf="filteredPrograms">
-            <div class="prog-card" *ngFor="let program of filteredPrograms | paginate: { itemsPerPage: 6, currentPage: p }">
-              <a class="card1" [routerLink]="['/','program',webUrlService.getUrl(program.id)]">
-                <h3 title="{{program.title}}">{{ limit(program.title, 65)}}</h3>
-                <p class="text-muted small text-justify small my-4" [innerHTML]="(program.about | slice:0:130)+'...'" >
-
-                </p>
-                <div class="go-corner"[routerLink]="['/','program',webUrlService.getUrl(program.id)]">
-                  <div class="go-arrow">→</div>
-                </div>
-              </a>
+          <div *ngIf="filteredPrograms">
+            <div class="row">
+              <div class="prog-card col-md-4" *ngFor="let program of filteredPrograms | paginate: { itemsPerPage: 6, currentPage: p }">
+                <a class="card1" [routerLink]="['/','program',webUrlService.getUrl(program.id)]">
+                  <h3 title="{{program.title}}">{{ limit(program.title, 65)}}</h3>
+                  <p class="text-muted small text-justify small my-4" [innerHTML]="(program.about | slice:0:130)+'...'"></p>
+                  <div class="go-corner" [routerLink]="['/','program',webUrlService.getUrl(program.id)]">
+                    <div class="go-arrow">→</div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-12 d-flex justify-content-end mt-2">
-          <button class="btn btn-link" (click)="navigateProg(-1)">
-<i class="fas fa-arrow-left fa-fw"></i>
-</button>
+                  <div class="col-12 d-flex justify-content-end mt-2">
+                    <button class="btn btn-link" (click)="navigateProg(-1)">
+          <i class="fas fa-arrow-left fa-fw"></i>
+          </button>
 
-          <button class="btn btn-link " (click)="navigateProg(-1)">
-<i class="fas fa-arrow-right fa-fw"></i>
-</button>
-      </div>
+                    <button class="btn btn-link " (click)="navigateProg(-1)">
+          <i class="fas fa-arrow-right fa-fw"></i>
+          </button>
+                </div>
     </div>
 
 
