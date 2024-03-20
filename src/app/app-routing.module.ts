@@ -16,9 +16,10 @@ import { OnlineDirectoryComponent } from './components/online-directory/online-d
 import { NoticeHomeComponent } from './components/notice-home/notice-home.component';
 import { NewsComponent } from './components/news/news.component';
 import { ArticlesComponent } from './components/articles/articles.component';
+import { ProgramsComponent } from './components/programs/programs.component';
 
 const routes: Routes = [
-  { path:'',component:HomeComponent },
+  {path:'',component:HomeComponent },
   {path:'admission',component:AdmissionsComponent},
   {path:'online-directory',component:OnlineDirectoryComponent},
   { path: 'school/:id', component: SchoolComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
   {path:'program/:id',component:ProgramComponent},
+  {path:'programs',component:ProgramsComponent},
   {path:'alumni',component:AlumniComponent},
   {path:'vacancies',component:VacanciesComponent},
   {path:'vacancy-home',component:VacancyHomeComponent},

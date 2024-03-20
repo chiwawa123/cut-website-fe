@@ -26,6 +26,8 @@ import { NoticeHomeComponent } from './components/notice-home/notice-home.compon
 import { NewsComponent } from './components/news/news.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ProgramsComponent } from './components/programs/programs.component';
+import { PaginatePipe } from './models/paginate.pipe';
 
 
 
@@ -50,6 +52,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     NoticeHomeComponent,
     NewsComponent,
     ArticlesComponent,
+    PaginatePipe,
+    ProgramsComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +62,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+
     CarouselModule.forRoot(),
   ],
   providers: [NgbCarouselConfig],

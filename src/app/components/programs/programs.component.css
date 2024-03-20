@@ -1,0 +1,138 @@
+.crd {
+
+  background: rgba(0, 0, 0, 0.596);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-200px);
+  display: flex;
+  max-width: 57%;
+  padding: 0px 30px;
+  margin: 0px auto;
+
+
+}
+
+
+.banner {
+  height: 300px;
+  width: 100%;
+  background-color: #f0f0f0;
+  background-blend-mode: overlay;
+  border-bottom: 5px solid #24b0ed;
+  padding: 0px;
+
+
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  background-blend-mode: overlay;
+}
+h3 {
+  color: #24b0ed;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+
+  &.small {
+    font-size: 14px;
+  }
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #24b0ed;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+
+}
+
+.card1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 0px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #24b0ed;
+    height: 32px;
+    width: 32px;
+    border-radius: 0px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(21);
+  }
+}
+
+.card1:hover {
+  p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
+}
+
+
+
+
+
+
+
+
+
+.bg-primary{
+  background-color: #F2F8F9 !important;
+
+}
+
+.link-style{
+  text-decoration: none !important;
+  color: #24b0ed;
+}
+
+.flex-display{
+  display: flex !important;
+}
