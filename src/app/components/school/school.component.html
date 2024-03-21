@@ -18,23 +18,30 @@
         <div class="cllg_nav">
           <div class="row">
             <div class="col-md-2">
-              <h5><a href="">Welcome</a></h5>
+              <h5><a href="">Welcome <i class="fa-solid fa-handshake"></i></a></h5>
             </div>
             <div class="col-md-2">
-              <h5><a href="#dept">Departments</a></h5>
+              <h5><a href="school/{{myUrl}}#dept">Departments <i class="fa-regular fa-building"></i></a></h5>
             </div>
 
             <div class="col-md-2">
-              <h5><a href="">News & Events</a></h5>
+              <h5><a href="school/{{myUrl}}#news">News & Events<i class="fa-solid fa-newspaper"></i></a></h5>
             </div>
             <div class="col-md-2">
-              <h5><a href="">Our Staff</a></h5>
+              <h5><a href="school/{{myUrl}}#staff">Our Staff <i class="fa-solid fa-users"></i></a></h5>
             </div>
             <div class="col-md-2">
-              <h5><a href="">Contact Us</a></h5>
+              <h5><a href="school/{{myUrl}}#contacts">Contact Us <i class="fa-solid fa-phone-volume"></i></a></h5>
             </div>
             <div class="col-md-2">
-              <h5><a href="">Apply Now! </a></h5>
+              <h5>    <a target="_blank" href="https://www.cut.ac.zw/online_application/#/online" class="nav-link btn-apply  font-weight-bold rounded-0">Apply Now <svg xmlns='http://www.w3.org/2000/svg'
+                stroke-width='10' stroke-dashoffset='0'
+                stroke-dasharray='0' stroke-linecap='round'
+                stroke-linejoin='round' viewBox='0 0 100 100'>
+             <polyline fill="none" points="40 20 20 20 20 90 80 90 80 60"/>
+             <polyline fill="none" points="60 10 90 10 90 40"/>
+             <line fill="none" x1="89" y1="11" x2="50" y2="50" />
+           </svg> </a></h5>
             </div>
 
 
@@ -46,64 +53,23 @@
     </div>
 
     <div class="container">
-      <div class="col-md-12 flex">
-        <div class="col-md-8 pt-5 mr-3">
-          <!-- <h2 ><span style="border-left: 5px solid #24b0ed; margin-right: 10px; "></span>Dean's Welcome message</h2> -->
-
-
-								<p class="format pt-2" [innerHTML]=" school.description.about">
-
-								</p>
-
-
-          <!-- <div class="col-md-12">
-            <div class="overview">
-              <div class="more-staff  wow fadeInUp pt-5" data-wow-delay="0.9s">
-                <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOnee" aria-expanded="true" aria-controls="collapseOne">
-                  Overview
-                 </button>
-                 <div class="container">
-                  <div id="collapseOnee" class="collapse collapsed" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <p class="format pt-3">The School is host to specialised natural science departments of biology, chemistry, physics and mathematics offering 4 year undergraduate degree programmes. These Departments offer well thought heritage-based-education which is compliant to the doctrine Education 5.0. The SNSM degree programmes are designed to impart knowledge and skills to make the ultimate output to be globally competitive and prepared to contribute to Zimbabwe’s economic growth through innovation and industrialisation as well as employment creation. The research and innovation acumen of our students is inspired through blending of lectures, seminars by eminent persons from industry, fieldwork, educational tours to industry, practical sessions, industrial attachment for key skills acquisition, and an honours research project during the final year.
-
-                        During third year of industrial attachment, our students are exposed to the work related learning environment. While on attachment students must identify a discipline specific problem faced by the organisation and they conduct research to solve the challenge. The traditional module based practical sessions have been reconfigured to immerse undergraduates in real research experiences with community. Our students also carry out independent researches, at 4th year that are critical to further develop academic independence, inquiry and communication skills. SNSM prides itself in highly qualified academics with expertise in exciting areas of science tasked to delivering research informed education and practical skills to our students. The School curriculum inspires its students for wealth creation through the blending of discipline specific modules with a range of enriching modules that cover entrepreneurship skills, marketing, quality assurance, and new product development. To enrich the learning ecosystem, our curricula is supported by well-established state-of-the-art facilities which include laboratories and a factory vital to stimulate critical thinking and innovation by both our academics and students. The School partners with other universities, funding agencies and industry to pursue science for society under its thematic areas of Health, Energy, Food Security, Water, Material Sciences, Environmental Sustainability and Science Education.</p>
-
-
-
-                      </div>
-                  </div>
-                 </div>
-
-
-              </div>
-
-             </div>
-          </div> -->
+      <div class="row">
+        <div class="col-md-8 col-sm-12 pt-5">
+          <p class="format pt-2" [innerHTML]="school.description.about"></p>
         </div>
 
-        <div class="col-md-4 pt-5">
+        <div class="col-md-4 col-sm-12 pt-5">
+          <img *ngIf="dean" [title]="dean.staff_details.title + ' ' + dean.staff_details.initials + ' ' + dean.staff_details.last_name + ': Dean'"
+            class="img-thumbnail img-fluid dean" data-descr="dean.staff_details.title + ' ' + dean.staff_details.initials + ' ' + dean.staff_details.last_name + ': Dean'"
+            [src]="this.serverDetails.serverUrlForStrorage + '/' + dean.staff_details.picUrl" width="500" />
+          <img *ngIf="!dean" class="img-thumbnail img-fluid dean" src="assets/img/avata.jpeg" />
 
-
-          <img *ngIf="dean" [title]="dean.staff_details.title+ ' '+dean.staff_details.initials +' '+dean.staff_details.last_name+ ': Dean' "
-          class="img-thumbnail img-fluid dean" data-descr="dean.staff_details.title+ ' '+dean.staff_details.initials +' '+dean.staff_details.last_name+ ': Dean' "
-          [src]="this.serverDetails.serverUrlForStrorage +'/'+dean.staff_details.picUrl" width="500" />
-          <img *ngIf="!dean"
-          class="img-thumbnail img-fluid dean"
-          src="assets/img/avata.jpeg" />
-
-
-          <h4 *ngIf="dean" class="text-center pt-2">  {{dean.staff_details.position}}    {{dean.staff_details.title +' '+ dean.staff_details.initials}} . {{dean.staff_details.last_name}}</h4>
-
-
-
+          <h4 *ngIf="dean" class="text-center pt-2">
+            {{dean.staff_details.position}} {{dean.staff_details.title + ' ' + dean.staff_details.initials}} . {{dean.staff_details.last_name}}
+          </h4>
         </div>
-
-
       </div>
-
     </div>
-
 
     <div class="container">
 
@@ -240,7 +206,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-9" id="contact_us">
+      <div class="col-md-9" id="contacts">
         <h3 class=" date text-center">Contact Us </h3>
         <div class="card border text-muted p-2" style="outline: none;">
           <h6 class="text-center pt-3">
@@ -337,7 +303,7 @@
 </section>
 
 
-<section>
+<section id="staff">
   <div class="container">
     <!-- Team Start -->
     <div class="container-xxl py-5">

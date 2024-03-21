@@ -12,7 +12,7 @@
 </section>
 <section>
   <div class="container">
- 
+
    <div class="program-tab">
     <div class="container py-5">
 
@@ -24,20 +24,27 @@
             <a id="home2-tab" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-selected="true" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 active">Overview</a>
           </li>
           <li class="nav-item flex-sm-fill">
-            <a id="profile2-tab" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" aria-selected="false" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0">Entry Requirements</a>
+            <a href="program/{{myUrl}}#entryRequirements"  class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0">Entry Requirements</a>
           </li>
           <li class="nav-item flex-sm-fill">
-            <a id="contact2-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false" class="nav-link text-uppercase font-weight-bold rounded-0">Opportunities</a>
+            <a href="program/{{myUrl}}#opportunities"  class="nav-link text-uppercase font-weight-bold rounded-0">Opportunities</a>
           </li>
           <li class="nav-item flex-sm-fill">
-            <a id="contact2-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false" class="nav-link text-uppercase font-weight-bold rounded-0">Course Synopsis</a>
+            <a  class="nav-link text-uppercase font-weight-bold rounded-0">Course Synopsis</a>
           </li>
           <li class="nav-item flex-sm-fill">
-            <a id="contact2-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false" class="nav-link text-uppercase font-weight-bold rounded-0">Contacts</a>
+            <a  href="program/{{myUrl}}#contacts" class="nav-link text-uppercase font-weight-bold rounded-0">Contacts</a>
           </li>
 
           <li class="nav-item flex-sm-fill">
-            <a id="contact2-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false" class="nav-link text-uppercase font-weight-bold rounded-0">Apply Now</a>
+            <a target="_blank" href="https://www.cut.ac.zw/online_application/#/online" class="nav-link btn-apply  font-weight-bold rounded-0">Apply Now <svg xmlns='http://www.w3.org/2000/svg'
+              stroke-width='10' stroke-dashoffset='0'
+              stroke-dasharray='0' stroke-linecap='round'
+              stroke-linejoin='round' viewBox='0 0 100 100'>
+           <polyline fill="none" points="40 20 20 20 20 90 80 90 80 60"/>
+           <polyline fill="none" points="60 10 90 10 90 40"/>
+           <line fill="none" x1="89" y1="11" x2="50" y2="50" />
+         </svg> </a>
           </li>
         </ul>
         <div id="myTab2Content" class="tab-content">
@@ -65,9 +72,10 @@
               </div>
 
             </div>
-            <div class="row about-content text-center flex mt-5">
+            <div class="row about-content text-center flex mt-5" id="entryRequirements">
               <div class="programme-requiremnt col-md-4 border-right">
                 <h4><i class="fa-solid fa-chart-column mr-2" style="color: #24b0ed;"></i>Entry Requirements</h4>
+                <hr>
                 <div class="inner my-4 px-2">
                   <div *ngFor="let entryType of entryTypes; let i=index">
                     <h4>{{entryType.name}}</h4>
@@ -75,7 +83,7 @@
                     <div *ngIf="entryType.myRequirements">
                       <a   data-aos="fade-up"
                       data-aos-duration="1800"
-                       [ngClass]="{'btn-primary': i%2==0, 'btn-warning': i%2!=0 }" class="btn  btn-sm text-white rounded-pill small shadow mb-1" *ngFor="let subject of entryType.myRequirements; let i = index "  role="button" aria-expanded="false">
+                       [ngClass]="{'btn-primary': i%2==0, 'btn-success': i%2!=0 }" class="btn  btn-sm text-white  small shadow mb-1" *ngFor="let subject of entryType.myRequirements; let i = index "  role="button" aria-expanded="false" style="text-shadow: 3px 2px 2px rgb(140, 140, 140);">
                         {{subject.subject.name}}
                       </a>
                     </div>
@@ -85,11 +93,11 @@
 
 
               <div class="programme-commences col-md-4 border-right ">
-                <h4><i class="fa-solid fa-calendar-week mr-2" style="color: #24b0ed;"></i>Commences</h4>
+                <h4><i class="fa-solid fa-calendar-week mr-2" style="color: #24b0ed;"></i>Commences</h4><hr>
                 <p  class="" *ngFor="let item of program.intakes">{{item.intake}}</p>
               </div>
-              <div class="programme-contacts col-md-4">
-                <h4><i class="fa-solid fa-phone-volume mr-2" style="color: #24b0ed;"></i>Contacts</h4>
+              <div class="programme-contacts col-md-4" id="contacts">
+                <h4><i class="fa-solid fa-phone-volume mr-2" style="color: #24b0ed;"></i>Contacts</h4><hr>
                 <p class="pt-2">The Chairperson</p>
                 <p>
                   +2632672123442
@@ -99,7 +107,7 @@
 
               </div>
             </div>
-            <div class="programme-opportunity col-md-12 pt-5">
+            <div id="opportunities" class="programme-opportunity col-md-12 pt-5" *ngIf="program.opportunities">
               <h4 class="text-center"><i class="fa-solid fa-dice-d20 mr-2" style="color: #24b0ed;"></i> Opportunities</h4>
               <p class="medium">
                 <span class="pt-4" style="text-align: justify;" *ngFor="let item of program.opportunities" [innerHTML]="item.opportunity.description"></span>

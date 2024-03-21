@@ -223,3 +223,23 @@ input:checked ~ .accordion-content {
  padding: 10px;
 }
 
+.btn-success{
+  background-color: #6c6c6c74 !important;
+  border: none !important;
+  border-radius: 0px;
+}
+.btn-primary{
+  background-color: #6c6c6c74 !important;
+  border: none !important;
+  border-radius: 0px;
+}
+.btn-apply{
+  background-color: #24b0ed;
+  color: #fff !important;
+}
+svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: #fff;
+}

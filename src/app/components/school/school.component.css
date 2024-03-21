@@ -315,3 +315,20 @@ a{
   background-color: #355c7d;
 }
 
+svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: #fff;
+
+}
+.btn-apply{
+  background-color: #caa350;
+  color: #fff !important;
+}
+.nav-link{
+  padding: 5px !important;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: normal !important;
+}
