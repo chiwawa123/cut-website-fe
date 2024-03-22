@@ -354,3 +354,6 @@ small{
 .text-primary{
   color: #24b0ed !important;
 }
+.program-link{
+  font-size: 13px; cursor: pointer;
+}

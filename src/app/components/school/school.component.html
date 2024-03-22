@@ -194,7 +194,7 @@
                   <tbody>
                     <tr class="py-0" *ngFor="let program of department.programs">
                       <td class="py-0">
-                        <a class="small text-success" style="font-size: 13px;" [routerLink]="['/', 'program', webUrlService.getUrl(program.id)]">
+                        <a class="small text-success program-link" [routerLink]="['/', 'program', webUrlService.getUrl(program.id)]">
                           {{ program.title }}
                         </a>
                       </td>

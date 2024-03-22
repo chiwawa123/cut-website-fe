@@ -170,7 +170,7 @@
                         <div class="col-sm-12 col-md-12 col-lg-6" >
                           <h3 class="text-center">Programs</h3>
                           <ul class="small  ">
-                            <li class="text-primary cursor-pointer"
+                            <li class="text-primary program-link"
                               *ngFor="let item of selectedPrograms; let i=index"
                               [routerLink]="['/','program',getUrl(item.id)]">{{item.title}}</li>
                           </ul>

@@ -224,12 +224,12 @@ input:checked ~ .accordion-content {
 }
 
 .btn-success{
-  background-color: #6c6c6c74 !important;
+  background-color: #24b0ed !important;
   border: none !important;
   border-radius: 0px;
 }
 .btn-primary{
-  background-color: #6c6c6c74 !important;
+  background-color: #24b0ed !important;
   border: none !important;
   border-radius: 0px;
 }
@@ -242,4 +242,7 @@ svg {
   height: 1rem;
   fill: none;
   stroke: #fff;
+}
+.program-link{
+  font-size: 13px; cursor: pointer;
 }

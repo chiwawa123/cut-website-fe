@@ -332,3 +332,7 @@ svg {
   margin-left: 5px;
   font-weight: normal !important;
 }
+
+.program-link{
+  font-size: 13px; cursor: pointer;
+}

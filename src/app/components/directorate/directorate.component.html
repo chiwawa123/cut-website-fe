@@ -6,8 +6,6 @@
     <div class="col-md-12 col-sm-12">
         <div class="wrapp"  *ngIf="directorate">
             <h2 class="pt-1 white" >			{{directorate.name}}</h2>
-
-
         </div>
     </div>
 </div>
@@ -19,8 +17,8 @@
   <div class="container">
     <div class="row pt-5">
       <div class="col-md-2">
-        <button class="btn btn-block btn-outline directorate-tabs" >Welcome</button>
-        <button class="btn btn-block btn-outline directorate-tabs" >Our Staff</button>
+        <a  class="btn btn-block btn-outline directorate-tabs"  >Welcome</a>
+        <a href="directorate/{{myUrl}}#staff" class="btn btn-block btn-outline directorate-tabs" >Our Staff</a>
         <button class="btn btn-block btn-outline directorate-tabs" >Contact Us</button>
       </div>
       <div class="col-md-7" *ngIf="directorate && directorate.description">
@@ -40,13 +38,14 @@
         class=" img-fluid director"
         src="assets/images/bg/huncho.png" />
         <div class="d-flex flex-column px-2">
+          <p *ngIf="director" class="mb-0">
+            {{director.title +' '+ director.initials}} . {{director.last_name}}
+          </p>
 
           <p *ngIf="director" class="mb-0 font-weight-bold">
             {{director.position}}
           </p>
-          <p *ngIf="director" class="mb-0">
-            {{director.title +' '+ director.initials}} . {{director.last_name}}
-          </p>
+
         </div>
       </div>
     </div>
@@ -124,20 +123,20 @@
     </div>
   </div>
 </section>
-<section>
+<section id="staff">
   <div class="container">
 
       <div class="container-xxl py-5">
-        <div class="container">
+        <div class="container" *ngIf="staff">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
 
                 <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s" *ngFor="let staffMember of staff ">
                     <div class="rounded shadow overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="assets/images/team/team-1.jpg" alt="">
+                          <img class="img-fluid" [src]="this.serverDetails.serverUrlForStrorage+'/'+ staffMember.details.picUrl"  alt="">
                             <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -145,56 +144,8 @@
                             </div>
                         </div>
                         <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded shadow overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/images/team/team-2.jpg" alt="">
-                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded shadow overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/images/team/team-3.jpg" alt="">
-                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="rounded shadow overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="assets/images/team/team-4.jpg" alt="">
-                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">{{staffMember.details.title}}: {{ staffMember.details.first_name }} {{ staffMember.details.last_name }}</h5>
+                            <small>{{staffMember.details.position}}</small>
                         </div>
                     </div>
                 </div>
@@ -220,3 +171,4 @@
 
   </div>
 </section>
+

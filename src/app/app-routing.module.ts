@@ -17,6 +17,7 @@ import { NoticeHomeComponent } from './components/notice-home/notice-home.compon
 import { NewsComponent } from './components/news/news.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { ProgramsComponent } from './components/programs/programs.component';
+import { InnovationTechTransferComponent } from './components/innovation-tech-transfer/innovation-tech-transfer.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path:'notice-home/:id',component:NoticeHomeComponent},
   { path: 'news', component: NewsComponent},
   { path: 'news/:id', component: ArticlesComponent},
+  {path:'academy',component:InnovationTechTransferComponent}
 ];
 
 @NgModule({

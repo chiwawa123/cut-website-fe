@@ -28,6 +28,7 @@ import { ArticlesComponent } from './components/articles/articles.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ProgramsComponent } from './components/programs/programs.component';
 import { PaginatePipe } from './models/paginate.pipe';
+import { InnovationTechTransferComponent } from './components/innovation-tech-transfer/innovation-tech-transfer.component';
 
 
 
@@ -54,6 +55,7 @@ import { PaginatePipe } from './models/paginate.pipe';
     ArticlesComponent,
     PaginatePipe,
     ProgramsComponent,
+    InnovationTechTransferComponent,
   ],
   imports: [
     BrowserModule,
