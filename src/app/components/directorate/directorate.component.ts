@@ -20,7 +20,6 @@ export class DirectorateComponent {
   myUrl: any;
 
 
-
 	constructor(private route: ActivatedRoute, private directorateService: DirectorateServiceService, public webUrlService:WebUrlServiceService,) {
 
     this.route.paramMap.subscribe(info => {
@@ -39,10 +38,7 @@ export class DirectorateComponent {
           // Access the properties of the details object
           const initials = details.initials;
           const title = details.title;
-
         });
-
-
 			})
 
 		})

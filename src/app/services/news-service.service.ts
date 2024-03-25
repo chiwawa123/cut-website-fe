@@ -31,7 +31,7 @@ export class NewsServiceService {
 
 	}
 
-	public getNoticeById(id: any):Observable<Notice>{
+	public getNoticeById(id: number):Observable<Notice>{
 		return this.http.get<Notice>(`${this.serverDetails.serverUrlForApi}/notice/get/${id}`);
 	}
 
